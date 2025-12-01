@@ -1,5 +1,7 @@
 # [Número.Subnúmero] [Nombre del Subtema]
 
+<!-- line-width: 150 -->
+
 **Área:** [Nombre del área principal]  
 **Nivel objetivo:** Sobresaliente  
 **Reactivos en examen:** 10  
