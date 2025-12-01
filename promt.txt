@@ -1,0 +1,4 @@
+Tengo una tarea para ti en el documento "NotebookLM_Task.md". Lee ese documento para entender qué debes hacer,
+luego usa el documento "Subtema_Actual.md" para saber qué subtema trabajar, el documento "Plantilla_EGEL.md"
+para conocer el formato, y todo el material de estudio que he proporcionado para generar el contenido. 
+Completa la plantilla siguiendo todas las instrucciones.
