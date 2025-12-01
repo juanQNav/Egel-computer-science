@@ -155,6 +155,13 @@ C) 1b, 2d, 3c, 4a
 5. Verifica que los 25 reactivos cubran exhaustivamente el subtema
 6. Asegúrate de que los niveles de dificultad estén correctamente asignados
 
+## Nota sobre formato markdown
+
+- Solo utilizar principalmente formato markdown.
+- Puedes utilizar latex mediante "$...$" delimitadores de Latex en linea dentro
+  de markdown.
+- Evita usar html
+
 ## Nota sobre el formato de tablas
 
 Todas las tablas que generes deben estar rodeadas por comentarios de
