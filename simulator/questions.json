@@ -1,0 +1,1355 @@
+[
+  {
+    "tema": "Algoritmia - Análisis y diseño de algoritmos",
+    "pregunta": "¿Qué representa la notación asintótica $O(f(n))$ en el contexto del análisis de algoritmos?",
+    "opciones": {
+      "A": "Una cota inferior para el tiempo de ejecución",
+      "B": "El tiempo de ejecución exacto",
+      "C": "Una cota superior para el tiempo de ejecución"
+    },
+    "respuesta_correcta": "C",
+    "justificacion": "La notación O (Big O) se utiliza para indicar una cota superior para el tiempo $t(n)$ requerido por un algoritmo, implicando que $t(n)$ no crece más rápido que $f(n)$."
+  },
+  {
+    "tema": "Algoritmia - Análisis y diseño de algoritmos",
+    "pregunta": "¿Cuál es el principal objetivo del análisis del caso peor (worst case) de un algoritmo?",
+    "opciones": {
+      "A": "Encontrar el tiempo promedio requerido por el algoritmo para todas las entradas posibles.",
+      "B": "Determinar el límite superior del tiempo de ejecución que el algoritmo puede requerir.",
+      "C": "Calcular el tiempo de ejecución para entradas que se encuentran en orden aleatorio."
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "El caso peor considera los ejemplares (entradas) que obligan al algoritmo a ejecutarse durante la máxima cantidad de tiempo, proporcionando el límite superior del tiempo de respuesta."
+  },
+  {
+    "tema": "Algoritmia - Análisis y diseño de algoritmos",
+    "pregunta": "En el contexto de un lenguaje de programación, ¿cuál es la característica fundamental de una función recursiva?",
+    "opciones": {
+      "A": "Que opera solo con tipos de datos estructurados como registros.",
+      "B": "Que se llama a sí misma y debe tener una condición de finalización previamente definida.",
+      "C": "Que siempre requiere un tiempo de ejecución de orden lineal $O(n)$."
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "La recursividad es cuando una función se llama a sí misma. Para que finalice la recursividad, debe existir una condición previamente definida."
+  },
+  {
+    "tema": "Algoritmia - Análisis y diseño de algoritmos",
+    "pregunta": "Si un algoritmo está representado por tres bucles anidados donde cada bucle itera $n$ veces, ¿cuál es el orden asintótico del tiempo requerido, asumiendo que el cuerpo del bucle interno es una operación elemental?",
+    "opciones": {
+      "A": "$\\Theta(n^2)$",
+      "B": "$\\Theta(n)$",
+      "C": "$\\Theta(n^3)$"
+    },
+    "respuesta_correcta": "C",
+    "justificacion": "Tres bucles anidados que iteran $n$ veces cada uno resultan en una complejidad de $n \\times n \\times n = n^3$. Esto se expresa como $\\Theta(n^3)$."
+  },
+  {
+    "tema": "Algoritmia - Análisis y diseño de algoritmos (Sobresaliente)",
+    "pregunta": "En el análisis asintótico, ¿por qué un algoritmo con complejidad $\\Theta(n\\log n)$ se considera más rápido que uno con complejidad $\\Theta(n^2)$ para ejemplares grandes?",
+    "opciones": {
+      "A": "Porque la complejidad $\\Theta(n \\log n)$ solo considera constantes multiplicativas más pequeñas.",
+      "B": "Porque $\\Theta(n \\log n)$ requiere tiempo cuadrático, mientras que $\\Theta(n^2)$ es lineal.",
+      "C": "Porque la ganancia de eficiencia del logaritmo es superior al aumento cuadrático a medida que $n$ crece."
+    },
+    "respuesta_correcta": "C",
+    "justificacion": "Para operadores de gran longitud, los algoritmos $\\Theta(n\\log n)$ son asintóticamente más eficientes y la ganancia de eficiencia de la complejidad logarítmica es superior al crecimiento cuadrático cuando $n$ aumenta."
+  },
+  {
+    "tema": "Algoritmia - Análisis y diseño de algoritmos (Sobresaliente)",
+    "pregunta": "¿Cuál es el objetivo principal de utilizar la función potencial ($\\Phi$) en el análisis amortizado de algoritmos?",
+    "opciones": {
+      "A": "Calcular el tiempo de ejecución del caso peor de una operación específica.",
+      "B": "Determinar la complejidad asintótica de la secuencia de operaciones en el caso medio.",
+      "C": "Evaluar el costo promedio por operación de una secuencia, incorporando el costo real y la desorganización de la estructura de datos."
+    },
+    "respuesta_correcta": "C",
+    "justificacion": "La función potencial se utiliza para el análisis amortizado, donde el tiempo amortizado es el costo real más el cambio en el estado de organización ($\\Phi_i - \\Phi_{i-1}$), permitiendo evaluar el costo promedio de las operaciones."
+  },
+  {
+    "tema": "Algoritmia - Análisis y diseño de algoritmos (Sobresaliente)",
+    "pregunta": "Si el tiempo de ejecución $T(n)$ de un algoritmo se encuentra en $\\Theta(f(n))$, ¿qué implicación tiene esta notación respecto a las cotas superiores e inferiores del algoritmo?",
+    "opciones": {
+      "A": "$T(n)$ solo tiene una cota superior $O(f(n))$ y la cota inferior no está definida.",
+      "B": "$T(n)$ tiene una cota inferior $\\Omega(f(n))$ y una cota superior $O(f(n))$.",
+      "C": "$T(n)$ tiene una cota inferior $\\Omega(f(n))$, pero $O(f(n))$ no se aplica."
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "$T(n) \\in \\Theta(f(n))$ es equivalente a que $T(n) \\in O(f(n)) \\cap \\Omega(f(n))$, lo que significa que el tiempo está acotado tanto superior como inferiormente por la función $f(n)$."
+  },
+  {
+    "tema": "Algoritmia - Análisis y diseño de algoritmos (Sobresaliente)",
+    "pregunta": "El algoritmo de multiplicación \"a la russe\" para enteros de tamaño $m$ y $n$ requiere un tiempo del orden de $mn$. Si se utiliza esta técnica para multiplicar dos enteros muy grandes de $n$ dígitos cada uno, ¿cuál sería el orden de complejidad?",
+    "opciones": {
+      "A": "$\\Theta(n)$",
+      "B": "$\\Theta(n^2)$",
+      "C": "$\\Theta(n^3)$"
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "Si se multiplican dos enteros grandes de $n$ dígitos, y se multiplica cada palabra de uno de los operandos por cada palabra del otro, el tiempo requerido es del orden de $mn$ donde $m \\approx n$, resultando en una complejidad de $\\Theta(n^2)$."
+  },
+  {
+    "tema": "Algoritmia - Análisis y diseño de algoritmos",
+    "pregunta": "Una operación cuyo tiempo de ejecución se puede acotar superiormente por una constante, independientemente del tamaño de la entrada, se denomina _______________.",
+    "opciones": {
+      "A": "Operación recursiva",
+      "B": "Operación elemental",
+      "C": "Operación de alto nivel"
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "Una operación elemental es aquella cuyo tiempo de ejecución está acotado superiormente por una constante que solo depende de la máquina en particular, no del tamaño de $n$."
+  },
+  {
+    "tema": "Algoritmia - Análisis y diseño de algoritmos",
+    "pregunta": "Para solucionar la recursividad de una función, como la de Fibonacci $f_n = f_{n-1} + f_{n-2}$, debe existir una _______________ que detenga el proceso.",
+    "opciones": {
+      "A": "función de orden superior",
+      "B": "condición de finalización",
+      "C": "ecuación de optimización"
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "La recursividad es cuando una función se llama a sí misma, y para finalizar, debe existir una condición previamente definida o condición de finalización."
+  },
+  {
+    "tema": "Algoritmia - Análisis y diseño de algoritmos",
+    "pregunta": "La _______________ permite realizar simplificaciones sustanciales, como expresar el tiempo requerido por un algoritmo salvo por una constante multiplicativa.",
+    "opciones": {
+      "A": "Notación binaria",
+      "B": "Notación asintótica",
+      "C": "Notación de recursión"
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "La notación asintótica permite realizar simplificaciones sustanciales, al interesarse en medir algo más tangible que el tiempo de ejecución, como el orden de crecimiento."
+  },
+  {
+    "tema": "Algoritmia - Análisis y diseño de algoritmos",
+    "pregunta": "Se dice que $t(n)$ tiende al límite $a$ cuando $n$ tiende a infinito, si para todo número real positivo $\\delta$, existe un umbral $n_0(\\delta)$ tal que la diferencia entre $t(n)$ y $a$ es menor que $\\delta$ para todos los valores de $n$ _______________.",
+    "opciones": {
+      "A": "pequeños o cercanos a cero",
+      "B": "mayores que $n_0(\\delta)$",
+      "C": "que están en el rango de 1 a 100"
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "La definición de límite indica que para todo $\\delta > 0$ existe un $n_0(\\delta)$ tal que $|f(n) - a| < \\delta$ para los valores de $n$ mayores que $n_0(\\delta)$."
+  },
+  {
+    "tema": "Algoritmia - Análisis y diseño de algoritmos (Sobresaliente)",
+    "pregunta": "Un algoritmo de \"divide y vencerás\" tiene una relación de recurrencia $T(n) = T(\\lfloor n/2 \\rfloor) + 2T(\\lceil n/2 \\rceil) + cn$. Si se aplica un cambio de variable donde $n$ es potencia exacta de $b$, la solución es de orden _______________.",
+    "opciones": {
+      "A": "$\\Theta(n^2)$",
+      "B": "$\\Theta(n \\log^2 n)$",
+      "C": "$\\Theta(n)$"
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "La relación $T(n) = T(\\lfloor n/2 \\rfloor) + 2T(\\lceil n/2\\rceil) + cn$ (una versión de $T(n)=T(n/b)+T(n/2)+cn$) tiene un término dominante que resulta en $\\Theta(n \\log^2 n)$."
+  },
+  {
+    "tema": "Algoritmia - Análisis y diseño de algoritmos (Sobresaliente)",
+    "pregunta": "El análisis de algoritmos de ordenación (como Quicksort o Mergesort) típicamente demuestra que, si todas las permutaciones iniciales son igualmente probables, el tiempo requerido en el caso medio es de orden _______________.",
+    "opciones": {
+      "A": "$\\Theta(n^2)$",
+      "B": "$\\Theta(n \\log n)$",
+      "C": "$\\Theta(n^3)$"
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "El tiempo medio requerido para la ordenación por mezcla (Merge Sort) y el ordenamiento rápido (Quick Sort) es típicamente $\\Theta(n\\log n)$."
+  },
+  {
+    "tema": "Algoritmia - Análisis y diseño de algoritmos (Sobresaliente)",
+    "pregunta": "En el análisis amortizado, el tiempo amortizado de la $i$-ésima operación ($\\hat{t}_i$) se define como el costo real $t_i$ más _______________ de la función potencial.",
+    "opciones": {
+      "A": "la resta del valor inicial $\\Phi_0$",
+      "B": "la suma del valor actual $\\Phi_i$",
+      "C": "la diferencia $\\Phi_i - \\Phi_{i-1}$"
+    },
+    "respuesta_correcta": "C",
+    "justificacion": "Formalmente, el tiempo amortizado requerido para la $i$-ésima operación es $t_i + \\Phi_i - \\Phi_{i-1}$, donde $t_i$ es el costo real y $\\Phi_i - \\Phi_{i-1}$ es el cambio en la función potencial."
+  },
+  {
+    "tema": "Algoritmia - Análisis y diseño de algoritmos (Sobresaliente)",
+    "pregunta": "Una relación de recurrencia que da como resultado un tiempo de orden $\\Theta(n)$ generalmente se aplica cuando el tiempo invertido por la llamada recursiva (ej. $T(n/2)$) se compensa con _______________.",
+    "opciones": {
+      "A": "sumas con costo unitario constante $c$",
+      "B": "la función $\\Theta(\\log n)$",
+      "C": "la división de la matriz de entrada en cuatro partes"
+    },
+    "respuesta_correcta": "A",
+    "justificacion": "Si en una recurrencia, la función $h(n)$ es de orden lineal $cn$, y las sumas se cuentan con costo unitario, la complejidad resultante es $\\Theta(n)$."
+  },
+  {
+    "tema": "Algoritmia - Estructuras de datos",
+    "pregunta": "¿Cuál es la característica fundamental que define la necesidad de utilizar un registro o estructura (struct) en lugar de una matriz (array)?",
+    "opciones": {
+      "A": "La capacidad de almacenar datos en posiciones de memoria no contiguas.",
+      "B": "La posibilidad de que los elementos o campos almacenados sean de tipos de datos diferentes.",
+      "C": "La restricción de que el acceso a los datos se realiza únicamente mediante notación de punto."
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "Un registro o estructura es una colección heterogénea de elementos, permitiendo almacenar datos de diferente tipo en una sola variable, a diferencia de una matriz, que requiere que todos los elementos sean del mismo tipo."
+  },
+  {
+    "tema": "Algoritmia - Estructuras de datos",
+    "pregunta": "En el contexto de las estructuras de datos, ¿qué principio de operación rige a una Pila (Stack)?",
+    "opciones": {
+      "A": "FIFO (First In, First Out).",
+      "B": "LIFO (Last In, First Out).",
+      "C": "FEFO (First Executed, First Out)."
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "Una Pila es una clase de lista donde el último elemento en ser añadido es el primero en ser retirado. Este comportamiento es conocido como LIFO."
+  },
+  {
+    "tema": "Algoritmia - Estructuras de datos",
+    "pregunta": "Si se declara una variable de tipo registro llamada `CLIENTE` con un campo llamado `nombre`, ¿cuál es la sintaxis correcta para acceder y manipular el valor del campo `nombre`?",
+    "opciones": {
+      "A": "`CLIENTE -> nombre`",
+      "B": "`nombre[CLIENTE]`",
+      "C": "`CLIENTE.nombre`"
+    },
+    "respuesta_correcta": "C",
+    "justificacion": "Para acceder a un campo de una variable tipo registro, se utiliza la notación de punto, siguiendo la sintaxis `variable_registro.id_campo`."
+  },
+  {
+    "tema": "Algoritmia - Estructuras de datos",
+    "pregunta": "¿Cómo se denomina a los datos individuales (caracteres, números enteros, o de coma flotante) que conforman un registro o estructura?",
+    "opciones": {
+      "A": "Celdas o índices.",
+      "B": "Campos, elementos o miembros.",
+      "C": "Vectores o tuplas."
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "A los datos del registro se les denomina campos, elementos o miembros."
+  },
+  {
+    "tema": "Algoritmia - Estructuras de datos (Sobresaliente)",
+    "pregunta": "Se requiere modelar la información de un acreedor que incluye su `nombre` (cadena de caracteres) y su `dirección`, donde la `dirección` está compuesta por `calle` (cadena) y `número` (entero). ¿Cuál es la estructura de acceso correcta para obtener el `número` del acreedor, asumiendo que el registro `ACREEDOR` tiene un campo `dirección` de tipo `DOMICILIO`?",
+    "opciones": {
+      "A": "`ACREEDOR.DOMICILIO.número`",
+      "B": "`ACREEDOR.dirección.número`",
+      "C": "`ACREEDOR->dirección->número`"
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "Para acceder a los campos de un registro anidado, se debe utilizar la sintaxis `variable_registro.id_campo1.id_campo2`, donde `dirección` es el campo intermedio y `número` es el campo final al que se desea acceder."
+  },
+  {
+    "tema": "Algoritmia - Estructuras de datos (Sobresaliente)",
+    "pregunta": "Un desarrollador utiliza punteros para implementar una lista de registros. Si un puntero no apunta a ningún registro, ¿qué valor especial se le asigna típicamente?",
+    "opciones": {
+      "A": "`Void`",
+      "B": "`Zero`",
+      "C": "`Nil`"
+    },
+    "respuesta_correcta": "C",
+    "justificacion": "Un puntero tiene el valor especial `nil` (o nulo) si no apunta a ningún registro, lo cual es común al inicio o al final de las listas."
+  },
+  {
+    "tema": "Algoritmia - Estructuras de datos (Sobresaliente)",
+    "pregunta": "¿Cuál es la condición indispensable para que el concepto de recursividad pueda ser aplicado exitosamente en el diseño de un algoritmo?",
+    "opciones": {
+      "A": "Que la función se declare como un procedimiento.",
+      "B": "Que exista una condición previamente definida para finalizar la llamada a sí misma.",
+      "C": "Que la función utilice punteros para la autoinvocación."
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "La recursividad es cuando una función se llama a sí misma, y para finalizarla debe existir una condición previamente definida."
+  },
+  {
+    "tema": "Algoritmia - Estructuras de datos (Sobresaliente)",
+    "pregunta": "Una compañía necesita almacenar datos complejos y heterogéneos para cada uno de sus empleados (Nombre, Dirección, Edad, Sexo, Antigüedad). ¿Por qué no es posible usar un arreglo (matriz) para esta tarea?",
+    "opciones": {
+      "A": "Porque el tamaño del arreglo no se puede determinar de antemano.",
+      "B": "Porque los componentes de un arreglo deben ser todos del mismo tipo.",
+      "C": "Porque los arreglos no permiten el uso de notación de punto para acceder a sus elementos."
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "Si se desea almacenar datos de diferente tipo (cadenas, enteros, caracteres) no es posible usar un arreglo, ya que sus componentes deben ser todos del mismo tipo."
+  },
+  {
+    "tema": "Algoritmia - Estructuras de datos",
+    "pregunta": "Un registro o estructura es un tipo de dato _______________ y definido por el usuario que permite almacenar datos de _______________ tipo en una sola variable.",
+    "opciones": {
+      "A": "simple / único",
+      "B": "estructurado / diferente",
+      "C": "primitivo / el mismo"
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "Un registro es un tipo de dato _estructurado_ que permite almacenar datos de _diferente_ tipo. Es la base de las estructuras heterogéneas."
+  },
+  {
+    "tema": "Algoritmia - Estructuras de datos",
+    "pregunta": "Si se añaden cuatro documentos (A, B, C, D) a una Pila en ese orden, y luego se retiran dos documentos, los primeros en salir serán _______________ siguiendo el principio _______________.",
+    "opciones": {
+      "A": "A y B / FIFO",
+      "B": "C y D / LIFO",
+      "C": "D y C / LIFO"
+    },
+    "respuesta_correcta": "C",
+    "justificacion": "El principio LIFO (Last In, First Out) dicta que el último elemento en entrar (D) es el primero en salir, seguido por el penúltimo (C)."
+  },
+  {
+    "tema": "Algoritmia - Estructuras de datos",
+    "pregunta": "En la terminología de estructuras de datos, a los elementos que componen un registro, los cuales pueden ser de tipo simple o compuesto, se les denomina comúnmente _______________, _______________ o _______________.",
+    "opciones": {
+      "A": "celdas, filas, columnas",
+      "B": "campos, elementos, miembros",
+      "C": "punteros, referencias, nodos"
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "Los datos que componen un registro se denominan campos, elementos o miembros."
+  },
+  {
+    "tema": "Algoritmia - Estructuras de datos",
+    "pregunta": "La sintaxis en pseudocódigo para definir un registro típicamente inicia con `registro ident_registro inicio`, mientras que la sintaxis equivalente en lenguaje C es `struct ident_registro ______________`.",
+    "opciones": {
+      "A": "`public:`",
+      "B": "`(`",
+      "C": "`{`"
+    },
+    "respuesta_correcta": "C",
+    "justificacion": "Según la correspondencia entre pseudocódigo y lenguaje C para la definición de un registro, la palabra clave `inicio` se traduce en el corchete de apertura `{` en C."
+  },
+  {
+    "tema": "Algoritmia - Estructuras de datos (Sobresaliente)",
+    "pregunta": "Para implementar una lista de registros que pueden ser creados y destruidos de forma dinámica en tiempo de ejecución, se recomienda el uso de _______________ en conjunción con los registros. Cuando la lista está vacía, el elemento que indica la ausencia de un registro se representa con el valor especial _______________.",
+    "opciones": {
+      "A": "funciones / `NULL_PTR`",
+      "B": "punteros / `nil`",
+      "C": "índices / `0`"
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "Los punteros se utilizan con registros para crear/destruir registros dinámicamente, y `nil` es el valor especial para indicar que un puntero no apunta a ningún registro."
+  },
+  {
+    "tema": "Algoritmia - Estructuras de datos (Sobresaliente)",
+    "pregunta": "Asumiendo que el campo `saldos` es directamente un arreglo dentro de `mi_cliente`, la sintaxis de acceso al mes 12 es: `mi_cliente.saldos[12]`",
+    "opciones": {
+      "A": "`mi_cliente.saldos.12`",
+      "B": "`mi_cliente.saldos`",
+      "C": "`mi_cliente.saldos[12]`"
+    },
+    "respuesta_correcta": "C",
+    "justificacion": "Se accede primero al campo `saldos` del registro `mi_cliente` utilizando la notación de punto, y luego se indexa el arreglo con corchetes para obtener el valor del mes 12: `variable_registro.campo_arreglo[índice]`."
+  },
+  {
+    "tema": "Algoritmia - Estructuras de datos (Sobresaliente)",
+    "pregunta": "La definición del registro `CLIENTE` incluye los campos `nombre` (cadena), `teléfono` (cadena), `saldos` y `moroso` (booleano). Para almacenar los saldos mensuales del último año (12 reales), el campo `saldos` debe definirse como un _______________.",
+    "opciones": {
+      "A": "registro `FECHA`",
+      "B": "arreglo `[1..12] DE reales`",
+      "C": "lista enlazada `DE reales`"
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "El campo `saldos` es una colección de elementos del mismo tipo (reales), idealmente definidos como un arreglo unidimensional de tamaño 12 (ej. `ARREGLO [1..12] DE reales`)."
+  },
+  {
+    "tema": "Algoritmia - Estructuras de datos (Sobresaliente)",
+    "pregunta": "Una matriz es una estructura de datos que consta de un número fijo de ítems del mismo tipo, cuyos elementos suelen almacenarse en _______________ contiguas de _______________.",
+    "opciones": {
+      "A": "ubicaciones / registros",
+      "B": "posiciones / almacenamiento",
+      "C": "funciones / la variable"
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "Los elementos de una matriz suelen almacenarse en _posiciones_ contiguas de _almacenamiento_."
+  },
+  {
+    "tema": "Algoritmia - Matemáticas discretas",
+    "pregunta": "¿Cuál es la representación correcta del número decimal -76 en su Complemento a 2 (C2), asumiendo una representación de 8 bits (1 byte)?",
+    "opciones": {
+      "A": "01001100",
+      "B": "10110100",
+      "C": "11011010"
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "Para obtener el C2 de -76: 1. Magnitud verdadera (76 en binario de 8 bits): 01001100. 2. Complemento a 1 (inversión de bits): 10110011. 3. Complemento a 2 (sumar 1 a C1): 10110011 + 1 = 10110100."
+  },
+  {
+    "tema": "Algoritmia - Matemáticas discretas",
+    "pregunta": "¿Cuál es la propiedad que debe cumplir una relación binaria $R$ para ser clasificada como una relación de equivalencia, además de ser reflexiva y simétrica?",
+    "opciones": {
+      "A": "Antisímétrica",
+      "B": "Irreflexiva",
+      "C": "Transitiva"
+    },
+    "respuesta_correcta": "C",
+    "justificacion": "Una relación es de equivalencia si y solo si es reflexiva, simétrica y transitiva. La propiedad de transitividad establece que si $a R b$ y $b R c$, entonces $a R c$."
+  },
+  {
+    "tema": "Algoritmia - Matemáticas discretas",
+    "pregunta": "Si $p$ es la proposición \"Juan estudia la licenciatura en matemáticas\" y $c$ es \"Juan estudia la licenciatura en ciencias computacionales\", ¿cuál es la notación lógica para el enunciado \"Juan estudia la licenciatura en matemáticas pero no estudia la licenciatura en ciencias computacionales\"?",
+    "opciones": {
+      "A": "$p \\lor \\neg c$",
+      "B": "$p \\land \\neg c$",
+      "C": "$\\neg (p \\land c)$"
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "El término \"pero\" se traduce lógicamente como una conjunción ($\\land$), y la negación se usa para \"no estudia\" ($\\neg c$). Por lo tanto, es $p \\land \\neg c$."
+  },
+  {
+    "tema": "Algoritmia - Matemáticas discretas",
+    "pregunta": "¿Cuál es el principal propósito del uso del método de reducción de Mapas de Karnaugh en el Álgebra de Boole?",
+    "opciones": {
+      "A": "Convertir expresiones booleanas a su forma canónica normal.",
+      "B": "Determinar la validez de un argumento lógico complejo.",
+      "C": "Simplificar una función booleana para reducir el número de compuertas necesarias."
+    },
+    "respuesta_correcta": "C",
+    "justificacion": "El Mapa de Karnaugh es una herramienta para obtener la expresión booleana simplificada en sumas de productos o productos de sumas. Esto se traduce directamente en la optimización del circuito lógico, reduciendo la cantidad de compuertas."
+  },
+  {
+    "tema": "Algoritmia - Matemáticas discretas (Sobresaliente)",
+    "pregunta": "Considere el argumento formal: _Si se realiza un buen diseño de la base de datos ($p$) y se hace una buena programación ($q$), entonces se accederá rápidamente a la información ($r$)\\_.\\_ Si no se hace buena programación ($\\neg q$), entonces toma mucho tiempo corregir el programa ($s$)\\_.\\_ Por lo tanto, si no se accede rápidamente a la información ($\\neg r$) y toma mucho tiempo corregir el programa ($s$), entonces no se ha realizado un buen diseño de la base de datos ($\\neg p$)\\_.\\_ ¿Cuál es la representación formal de este argumento?",
+    "opciones": {
+      "A": "$[(p \\land q) \\rightarrow r] \\land [\\neg q \\rightarrow s] \\implies [(\\neg r \\land s) \\rightarrow \\neg p]$",
+      "B": "$[p \\rightarrow (q \\land r)] \\land [\\neg q \\rightarrow s] \\implies [(\\neg r \\lor s) \\rightarrow \\neg p]$",
+      "C": "$[(p \\lor q) \\rightarrow r] \\land [q \\rightarrow s] \\implies [\\neg r \\rightarrow \\neg p]$"
+    },
+    "respuesta_correcta": "A",
+    "justificacion": "La primera premisa es la conjunción de $p$ y $q$ implicando $r$. La segunda premisa es $\\neg q$ implicando $s$. La conclusión se forma por la conjunción de $\\neg r$ y $s$ implicando $\\neg p$."
+  },
+  {
+    "tema": "Algoritmia - Matemáticas discretas (Sobresaliente)",
+    "pregunta": "Considere la proposición en lógica de primer orden: \"Existe una persona $x$ en mi clase tal que para toda persona $y$ en mi clase, $x$ es al menos de la misma edad que $y$\". ¿Cuál es la negación formal (usando las leyes de De Morgan generalizadas) de esta proposición?",
+    "opciones": {
+      "A": "$\\forall x \\exists y \\neg P(x, y)$ (donde $P(x, y)$ es \"x es al menos de la misma edad que y\").",
+      "B": "$\\forall x \\exists y (P(x) \\land \\neg P(y))$",
+      "C": "$\\exists x \\forall y P(x, y)$"
+    },
+    "respuesta_correcta": "A",
+    "justificacion": "Si la proposición original es $\\exists x \\forall y P(x, y)$, la negación de una proposición cuantificada se obtiene negando los cuantificadores (cambiando $\\exists$ por $\\forall$ y $\\forall$ por $\\exists$) y negando la función proposicional. Por lo tanto, $\\neg (\\exists x \\forall y P(x, y))$ se convierte en $\\forall x \\exists y \\neg P(x, y)$."
+  },
+  {
+    "tema": "Algoritmia - Matemáticas discretas (Sobresaliente)",
+    "pregunta": "Si se tiene un número en base 13 como $7C9.A_{(13)}$ y otro número en base 17 como $1A3.0283_{(17)}$, ¿qué operación requiere el mayor cuidado en el manejo de símbolos y valores posicionales entre las bases dadas?",
+    "opciones": {
+      "A": "Suma de dos cantidades en complemento a 2 en base binaria.",
+      "B": "Conversión de $7C9.A_{(13)}$ a base 10.",
+      "C": "Suma de $7C9.A_{(13)}$ y $1A3.0283_{(17)}$ directamente en base decimal."
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "Las bases 13 y 17 son bases arbitrarias que usan símbolos para dígitos mayores a 9 (como C y A). La conversión entre una base arbitraria como la base 13 (donde C vale 12, A vale 10) y la base decimal requiere manejar correctamente los símbolos alfabéticos y sus valores posicionales específicos, lo que requiere un conocimiento riguroso de la generalización de las conversiones."
+  },
+  {
+    "tema": "Algoritmia - Matemáticas discretas (Sobresaliente)",
+    "pregunta": "Una función booleana $F$ ha sido simplificada, y para su implementación solo se dispone de compuertas NOR. ¿Cuál principio justifica la posibilidad de implementar cualquier función $F$ utilizando exclusivamente compuertas NOR?",
+    "opciones": {
+      "A": "El principio de dualidad, que asegura la existencia del complemento de la función.",
+      "B": "El teorema de Shannon, que permite expandir la función en productos de sumas.",
+      "C": "El carácter universal de la compuerta NOR, que permite simular las compuertas AND, OR y NOT."
+    },
+    "respuesta_correcta": "C",
+    "justificacion": "Las compuertas NOR (así como las NAND) son compuertas universales. Esto significa que, con cualquiera de ellas, se pueden construir las compuertas lógicas básicas (AND, OR, NOT), y por lo tanto, cualquier circuito lógico."
+  },
+  {
+    "tema": "Algoritmia - Matemáticas discretas",
+    "pregunta": "Las variables locales en un procedimiento o función se pasan por _______________, lo que significa que son tratadas como variables locales dentro del procedimiento. En cambio, los parámetros de tipo matriz se pasan por _______________, lo cual significa que toda modificación efectuada dentro del procedimiento se ve reflejada en la matriz original.",
+    "opciones": {
+      "A": "valor; referencia",
+      "B": "referencia; valor",
+      "C": "constante; variable"
+    },
+    "respuesta_correcta": "A",
+    "justificacion": "Los parámetros escalares (variables locales) se pasan por valor. Los parámetros tipo matriz o estructura se pasan por referencia, reflejando cualquier modificación realizada."
+  },
+  {
+    "tema": "Algoritmia - Matemáticas discretas",
+    "pregunta": "El proceso de obtención de la representación de un número negativo en Complemento a 2 requiere primero obtener su Magnitud Verdadera, luego su _______________, y finalmente sumarle 1 para obtener el Complemento a 2.",
+    "opciones": {
+      "A": "Residuo",
+      "B": "Complemento a 1",
+      "C": "Exceso a $2^{n-1}$"
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "El cálculo de Complemento a 2 sigue los pasos: Magnitud Verdadera $\\rightarrow$ Complemento a 1 (inversión de bits) $\\rightarrow$ Complemento a 2 (sumar 1 a C1)."
+  },
+  {
+    "tema": "Algoritmia - Matemáticas discretas",
+    "pregunta": "En la Teoría de Conjuntos, si $H$, $C$ y $D$ son tres conjuntos, la región del diagrama de Venn que representa a los elementos que están en el conjunto $H$ y en el conjunto $C$, pero no en el conjunto $D$, se representa mediante la operación lógica $H \\cap C \\cap \\neg D$.",
+    "opciones": {
+      "A": "$\\neg (H \\cup C) \\cup D$",
+      "B": "$H \\cap C \\cap \\neg D$",
+      "C": "$(H \\cup C) \\setminus D$"
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "La conjunción $H \\cap C$ representa \"estar en $H$ y en $C$\". El requisito de \"pero no en $D$\" se logra intersectando con la negación de $D$ ($\\neg D$)."
+  },
+  {
+    "tema": "Algoritmia - Matemáticas discretas",
+    "pregunta": "Para que un argumento sea considerado válido, el valor de verdad de su conclusión debe ser _______________ en todos los casos en los que el valor de verdad de sus premisas es _______________.",
+    "opciones": {
+      "A": "Falso; Verdadero",
+      "B": "Verdadero; Falso",
+      "C": "Verdadero; Verdadero"
+    },
+    "respuesta_correcta": "C",
+    "justificacion": "Un argumento es válido si es imposible que las premisas sean verdaderas y la conclusión sea falsa. Por lo tanto, si las premisas son Verdaderas, la conclusión _debe_ ser Verdadera para que el argumento se mantenga."
+  },
+  {
+    "tema": "Algoritmia - Matemáticas discretas (Sobresaliente)",
+    "pregunta": "En la Suma en Complemento a 2 de dos números representados en 2 bytes (16 bits), si la representación binaria resultante de $-149_{(10)}$ es $11111111101101001_{(2)}$. La representación final de 3 bytes (24 bits) para el número $-149_{(10)}$ con extensión de signo es:",
+    "opciones": {
+      "A": "$00000000\\ 11111111\\ 10110100$",
+      "B": "$11111111\\ 11111111\\ 01001011$",
+      "C": "$11111111\\ 11111111\\ 10110100$"
+    },
+    "respuesta_correcta": "C",
+    "justificacion": "Cuando se extiende la representación de un número negativo en C2, se debe realizar la extensión del signo. El bit más significativo de $-149_{(10)}$ en 2 bytes es 1. Para extender a 3 bytes (24 bits), se agregan 8 bits con el valor 1 (el bit de signo) al inicio. La representación de 2 bytes es $11111111\\ 10110100_{(2)}$. La extensión a 3 bytes es $11111111\\ 11111111\\ 10110100_{(2)}$."
+  },
+  {
+    "tema": "Desarrollo de Software de Base - Arquitectura de Computadoras y Sistemas Operativos",
+    "pregunta": "¿Cuál es el propósito principal del Analizador Léxico en las fases de desarrollo de un compilador, según la estructura tradicional de análisis y síntesis?",
+    "opciones": {
+      "A": "Generar código de máquina optimizado utilizando asignación de registros.",
+      "B": "Agrupar caracteres individuales en unidades significativas llamadas lexemas y producir tokens.",
+      "C": "Determinar si las sentencias fuente cumplen con las reglas gramaticales de la sintaxis."
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "El analizador léxico toma los caracteres de entrada y los agrupa en secuencias significativas (lexemas), produciendo como salida tokens que pasan a la fase de análisis sintáctico."
+  },
+  {
+    "tema": "Desarrollo de Software de Base - Arquitectura de Computadoras y Sistemas Operativos",
+    "pregunta": "En la arquitectura de Von Neumann, ¿qué componente de la instrucción es responsable de indicar la acción a realizar?",
+    "opciones": {
+      "A": "El operando, que contiene la dirección de memoria.",
+      "B": "El código de operación (opcode), que especifica la operación.",
+      "C": "El registro R0-R7, utilizado para almacenamiento temporal."
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "La instrucción especifica dos cosas: el código de operación (opcode), que es la operación a realizar, y los operandos (datos/ubicaciones) a usar para la operación."
+  },
+  {
+    "tema": "Desarrollo de Software de Base - Arquitectura de Computadoras y Sistemas Operativos",
+    "pregunta": "Si un proceso en un Sistema Operativo no necesita que todas sus páginas se encuentren en la memoria principal para poder ejecutarse, ¿a qué técnica avanzada de manejo de memoria se refiere este comportamiento?",
+    "opciones": {
+      "A": "Particionamiento estático.",
+      "B": "Paginación bajo demanda (demand paging).",
+      "C": "Uso de overlays (superposiciones) únicamente."
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "En este modelo avanzado de paginación, las páginas se pueden leer bajo demanda, lo que significa que no se requiere mantener todas las páginas del proceso en los marcos de la memoria principal para que el proceso se ejecute."
+  },
+  {
+    "tema": "Desarrollo de Software de Base - Arquitectura de Computadoras y Sistemas Operativos",
+    "pregunta": "¿Qué define la Arquitectura del Conjunto de Instrucciones (ISA) de una computadora?",
+    "opciones": {
+      "A": "El tamaño de la memoria principal y el tipo de bus de datos.",
+      "B": "Las instrucciones de la computadora y sus formatos.",
+      "C": "La capacidad de generar nuevas tareas paralelas (tasks)."
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "La ISA es el nombre dado a las instrucciones de una computadora y sus formatos."
+  },
+  {
+    "tema": "Desarrollo de Software de Base - Arquitectura de Computadoras y Sistemas Operativos (Sobresaliente)",
+    "pregunta": "Durante la fase de Generación de Código, se identifican las siguientes operaciones: $X=A+B$, $A=C*D$. Si $A$ está viva a la salida del bloque, ¿qué tipo de dependencia debe respetarse estrictamente para evitar errores, y cuál es la única que no puede ser eliminada?",
+    "opciones": {
+      "A": "Antidependencia; puede eliminarse usando ubicaciones adicionales.",
+      "B": "Dependencia de salida; puede eliminarse usando ubicaciones adicionales.",
+      "C": "Dependencia verdadera (true dependence); no puede eliminarse y debe ser respetada."
+    },
+    "respuesta_correcta": "C",
+    "justificacion": "Las dependencias verdaderas (true data dependences) ocurren cuando una instrucción debe leer una ubicación después de que otra ha escrito en ella. Son las únicas que no pueden eliminarse y deben ser respetadas al ordenar el código."
+  },
+  {
+    "tema": "Desarrollo de Software de Base - Arquitectura de Computadoras y Sistemas Operativos (Sobresaliente)",
+    "pregunta": "En un entorno de programación paralela utilizando OpenMP, un hilo maestro crea una tarea (`#pragma omp task`) y desea que la ejecución del hilo maestro se suspenda hasta que la tarea creada finalice. ¿Qué cláusula debe aplicarse a la directiva `task` para asegurar este comportamiento?",
+    "opciones": {
+      "A": "`final(true)` para incluir el bloque estructurado en la tarea.",
+      "B": "`if(false)` para crear una tarea indeferida.",
+      "C": "`shared(variable)` para evitar una condición de carrera."
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "Si `scalar-logical-expression` en la cláusula `if` se evalúa como falso, se crea una tarea indeferida (undeferred task). Una tarea indeferida suspende la tarea creadora hasta que la tarea creada finaliza."
+  },
+  {
+    "tema": "Desarrollo de Software de Base - Arquitectura de Computadoras y Sistemas Operativos (Sobresaliente)",
+    "pregunta": "La generación de código implica la conversión de una expresión aritmética compleja en **código de tres direcciones**. ¿Cuál es la característica principal de una instrucción en código de tres direcciones que facilita el proceso de optimización?",
+    "opciones": {
+      "A": "Utiliza únicamente variables temporales para todos sus operandos.",
+      "B": "Permite a lo sumo un operador en el lado derecho de la instrucción.",
+      "C": "Está escrito en lenguaje ensamblador para la máquina de destino."
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "En código de tres direcciones, solo se permite a lo sumo un operador en el lado derecho de una instrucción, lo que significa que no se permiten expresiones aritméticas construidas (built-up arithmetic expressions)."
+  },
+  {
+    "tema": "Desarrollo de Software de Base - Arquitectura de Computadoras y Sistemas Operativos (Sobresaliente)",
+    "pregunta": "El Analizador Léxico utiliza la teoría de las _______________, mientras que el Análisis Sintáctico se fundamenta en las _______________, como las Gramáticas Libres de Contexto (CFG).",
+    "opciones": {
+      "A": "Expresiones Regulares / Gramáticas Formales.",
+      "B": "Máquinas de Turing / Lógica de Predicados.",
+      "C": "Semántica Operacional / Álgebra de Boole."
+    },
+    "respuesta_correcta": "A",
+    "justificacion": "El análisis léxico utiliza a menudo expresiones regulares (regex). Las gramáticas libres de contexto (CFG) son útiles para tratar algunos aspectos del lenguaje natural y de la sintaxis."
+  },
+  {
+    "tema": "Desarrollo de Software de Base - Arquitectura de Computadoras y Sistemas Operativos",
+    "pregunta": "Complete la secuencia del ciclo de procesamiento de una instrucción en la arquitectura de Von Neumann: 1. El registro de instrucción es cargado con la próxima instrucción. 2. Obtener operandos (FETCH OPERANDS). 3. _______________. 4. Almacenar el resultado (STORE RESULT).",
+    "opciones": {
+      "A": "Escribir en memoria principal (WRITE).",
+      "B": "Ejecutar la operación (EXECUTE).",
+      "C": "Inicializar la Unidad Aritmético Lógica (ALU)."
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "Los pasos del procesamiento de instrucciones incluyen Obtener Operandos, Ejecutar (perform the operation) y Almacenar Resultado."
+  },
+  {
+    "tema": "Desarrollo de Software de Base - Arquitectura de Computadoras y Sistemas Operativos",
+    "pregunta": "El analizador léxico produce un _token_ que pasa a la fase de análisis sintáctico. Este _token_ se representa generalmente como una tupla: $\\langle \\text{nombre-token}; \\text{valor-atributo} \\rangle$, donde el componente $\\text{valor-atributo}$ apunta a una entrada en la _______________.",
+    "opciones": {
+      "A": "Representación intermedia (IR).",
+      "B": "Tabla de símbolos.",
+      "C": "Cola de ejecución."
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "El componente valor-atributo del token apunta a una entrada en la tabla de símbolos para dicho token, información necesaria para el análisis semántico y la generación de código."
+  },
+  {
+    "tema": "Desarrollo de Software de Base - Arquitectura de Computadoras y Sistemas Operativos",
+    "pregunta": "En la gestión de procesos, cuando una tarea es creada con la directiva OpenMP `#pragma omp task`, por defecto, la ejecución de la tarea que la creó _______________.",
+    "opciones": {
+      "A": "se suspende hasta que la tarea creada finalice.",
+      "B": "continúa sin demora.",
+      "C": "se transfiere a otro hilo del equipo."
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "Cuando se crea una nueva tarea, la ejecución de la tarea que la creó continúa sin demora."
+  },
+  {
+    "tema": "Desarrollo de Software de Base - Arquitectura de Computadoras y Sistemas Operativos",
+    "pregunta": "En el manejo de memoria por paginación, el Sistema Operativo debe mantener una _______________ por cada proceso para mostrar el marco donde se encuentra cada página ocupada, mientras que el procesador utiliza el número de página y el desplazamiento para calcular direcciones absolutas.",
+    "opciones": {
+      "A": "lista de marcos libres.",
+      "B": "tabla de páginas.",
+      "C": "tabla de descriptores de registros."
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "El sistema operativo debe mantener una tabla de páginas por cada proceso para el esquema de paginación. El procesador usa el número de página y el desplazamiento."
+  },
+  {
+    "tema": "Desarrollo de Software de Base - Arquitectura de Computadoras y Sistemas Operativos (Sobresaliente)",
+    "pregunta": "La dependencia de datos entre la instrucción 2 y la instrucción 3 es de tipo _______________, porque la instrucción 3 debe leer el valor de $X$ después de que la instrucción 2 lo ha _______________.",
+    "opciones": {
+      "A": "Antidependencia / leído.",
+      "B": "Dependencia de salida / escrito.",
+      "C": "Dependencia verdadera / escrito."
+    },
+    "respuesta_correcta": "C",
+    "justificacion": "La instrucción 2 escribe en X, y la instrucción 3 lee X. Esto es una dependencia verdadera (True Dependence) o dependencia de flujo (write-read), y ocurre cuando una instrucción debe leer una ubicación después de que otra ha escrito en ella."
+  },
+  {
+    "tema": "Desarrollo de Software de Base - Arquitectura de Computadoras y Sistemas Operativos (Sobresaliente)",
+    "pregunta": "En la Generación de Código, si se genera la instrucción `ADD Rx; Ry; Rz` que implementa $x = y + z$, y se actualizan los descriptores, el descriptor de registro para $Rx$ se modifica para que solo contenga $x$. En este punto, la ubicación de memoria para $x$ en el descriptor de direcciones _______________, indicando que el valor más actualizado de $x$ está solo en el registro.",
+    "opciones": {
+      "A": "se mantiene para garantizar el acceso a la memoria.",
+      "B": "no se incluye.",
+      "C": "se actualiza con el nombre de $Rx$."
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "Al procesar la operación, se cambia el descriptor de direcciones para $x$ de modo que su única ubicación sea $Rx$, y se observa que la ubicación de memoria para $x$ _no está_ en el descriptor de direcciones, porque el valor en memoria no está actualizado."
+  },
+  {
+    "tema": "Desarrollo de Software de Base - Compiladores",
+    "pregunta": "¿Cuál es la fase del compilador encargada de agrupar la secuencia de caracteres del código fuente en unidades significativas llamadas tokens?",
+    "opciones": {
+      "A": "Análisis Sintáctico",
+      "B": "Análisis Léxico",
+      "C": "Análisis Semántico"
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "El análisis léxico (escáner) es la primera fase que lee el flujo de caracteres y los agrupa en lexemas para producir tokens. El sintáctico usa estos tokens para crear árboles, y el semántico revisa la coherencia."
+  },
+  {
+    "tema": "Desarrollo de Software de Base - Compiladores",
+    "pregunta": "¿Qué tipo de autómata es teóricamente necesario para reconocer un lenguaje libre de contexto que requiere equilibrar paréntesis anidados?",
+    "opciones": {
+      "A": "Autómata Finito Determinista",
+      "B": "Autómata de Pila",
+      "C": "Máquina de Turing"
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "Los lenguajes libres de contexto (como la estructura de paréntesis) requieren memoria auxiliar para el conteo o anidamiento, lo cual es proporcionado por la pila en un Autómata de Pila. Un Autómata Finito no tiene memoria suficiente."
+  },
+  {
+    "tema": "Desarrollo de Software de Base - Compiladores",
+    "pregunta": "En el contexto de la jerarquía de Chomsky, ¿qué tipo de gramática genera los lenguajes regulares?",
+    "opciones": {
+      "A": "Tipo 3",
+      "B": "Tipo 2",
+      "C": "Tipo 1"
+    },
+    "respuesta_correcta": "A",
+    "justificacion": "Las gramáticas de Tipo 3 o gramáticas regulares generan lenguajes regulares, los cuales son reconocidos por autómatas finitos. Tipo 2 son libres de contexto y Tipo 1 son sensibles al contexto."
+  },
+  {
+    "tema": "Desarrollo de Software de Base - Compiladores",
+    "pregunta": "¿Qué estructura de datos se utiliza principalmente para almacenar información sobre las variables, funciones y tipos durante todo el proceso de compilación?",
+    "opciones": {
+      "A": "Árbol de Análisis Sintáctico",
+      "B": "Buffer de Entrada",
+      "C": "Tabla de Símbolos"
+    },
+    "respuesta_correcta": "C",
+    "justificacion": "La tabla de símbolos es la estructura central que almacena los identificadores y sus atributos asociados (tipos, alcance, dirección) para ser consultados y actualizados por las distintas fases."
+  },
+  {
+    "tema": "Desarrollo de Software de Base - Compiladores (Sobresaliente)",
+    "pregunta": "Si se tiene una gramática con la producción $A \\to A\\alpha | \\beta$, ¿qué problema presenta para un analizador sintáctico descendente recursivo?",
+    "opciones": {
+      "A": "Ambigüedad inherente",
+      "B": "Recursividad por la izquierda",
+      "C": "Factorización por la izquierda necesaria"
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "La producción $A \\to A\\alpha$ exhibe recursividad por la izquierda directa. Un parser descendente entraría en un bucle infinito al intentar derivar A, pues se llamaría a sí mismo inmediatamente sin consumir entrada."
+  },
+  {
+    "tema": "Desarrollo de Software de Base - Compiladores (Sobresaliente)",
+    "pregunta": "Al convertir un Autómata Finito No Determinista (AFN) a un Autómata Finito Determinista (AFD) utilizando el método de construcción de subconjuntos, ¿qué representa cada estado del AFD resultante?",
+    "opciones": {
+      "A": "Una transición épsilon del AFN",
+      "B": "Un conjunto de estados del AFN",
+      "C": "Un símbolo del alfabeto del AFN"
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "En la construcción de subconjuntos, cada estado del AFD corresponde a un conjunto de estados del AFN original a los que se puede llegar simultáneamente tras leer un símbolo de entrada."
+  },
+  {
+    "tema": "Desarrollo de Software de Base - Compiladores (Sobresaliente)",
+    "pregunta": "¿Cuál es la característica distintiva de un código de tres direcciones en la generación de código intermedio?",
+    "opciones": {
+      "A": "Cada instrucción tiene a lo sumo tres operandos",
+      "B": "Utiliza tres registros de CPU físicos",
+      "C": "Solo permite tres tipos de operaciones aritméticas"
+    },
+    "respuesta_correcta": "A",
+    "justificacion": "El código de tres direcciones descompone expresiones complejas en una secuencia de instrucciones donde cada una tiene como máximo un operador y tres operandos (dos fuentes y un destino), como `x = y + z`."
+  },
+  {
+    "tema": "Desarrollo de Software de Base - Compiladores (Sobresaliente)",
+    "pregunta": "Dada la expresión regular `(a|b)*abb`, ¿cuál es la característica de las cadenas que acepta?",
+    "opciones": {
+      "A": "Cadenas que contienen la subcadena \"abb\"",
+      "B": "Cadenas que terminan en \"abb\"",
+      "C": "Cadenas que comienzan con \"a\" o \"b\" y terminan en \"bb\""
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "`(a|b)*` denota cualquier secuencia de 'a's y 'b's (incluyendo vacía). La concatenación final `abb` fuerza a que la cadena, sin importar lo que venga antes, debe finalizar obligatoriamente con la secuencia \"abb\"."
+  },
+  {
+    "tema": "Desarrollo de Software de Base - Compiladores",
+    "pregunta": "En el análisis sintáctico, un _______________ es una representación jerárquica que muestra cómo se deriva una cadena de tokens a partir del símbolo inicial de la gramática.",
+    "opciones": {
+      "A": "árbol de derivación",
+      "B": "autómata finito",
+      "C": "diagrama de flujo"
+    },
+    "respuesta_correcta": "A",
+    "justificacion": "El árbol de derivación (o árbol sintáctico concreto) muestra explícitamente la estructura gramatical de la sentencia y el orden en que se aplicaron las producciones."
+  },
+  {
+    "tema": "Desarrollo de Software de Base - Compiladores",
+    "pregunta": "El modelo de _______________ consta de una cinta infinita, un cabezal de lectura/escritura y un control de estados finitos, siendo capaz de reconocer lenguajes recursivamente enumerables.",
+    "opciones": {
+      "A": "Autómata Linealmente Acotado",
+      "B": "Máquina de Turing",
+      "C": "Autómata de Pila"
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "Esta es la definición clásica de una Máquina de Turing, el modelo computacional más potente en la jerarquía estándar."
+  },
+  {
+    "tema": "Desarrollo de Software de Base - Compiladores",
+    "pregunta": "En una gramática libre de contexto, los símbolos que no pueden ser reemplazados por otros se denominan _______________.",
+    "opciones": {
+      "A": "no terminales",
+      "B": "terminales",
+      "C": "producciones"
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "Los terminales son los símbolos básicos con los que se forman las cadenas del lenguaje (ej. tokens como `if`, `id`, `+`). Los no terminales son variables que se expanden."
+  },
+  {
+    "tema": "Desarrollo de Software de Base - Compiladores",
+    "pregunta": "El análisis _______________ comprueba que los operandos de un operador sean compatibles, por ejemplo, asegurando que no se sume un entero con una cadena sin conversión.",
+    "opciones": {
+      "A": "sintáctico",
+      "B": "léxico",
+      "C": "semántico"
+    },
+    "respuesta_correcta": "C",
+    "justificacion": "La comprobación de tipos es una tarea fundamental del análisis semántico. El análisis sintáctico solo verifica la estructura, no el significado o compatibilidad de tipos."
+  },
+  {
+    "tema": "Desarrollo de Software de Base - Compiladores (Sobresaliente)",
+    "pregunta": "Para eliminar la ambigüedad en la expresión `a + b * c` y asegurar que la multiplicación se realice antes que la suma, la gramática debe diseñarse para reflejar la _______________ de los operadores.",
+    "opciones": {
+      "A": "asociatividad",
+      "B": "precedencia",
+      "C": "conmutatividad"
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "La precedencia determina qué operador se aplica primero. Al diseñar la gramática, se colocan los operadores de mayor precedencia (multiplicación) en un nivel más bajo del árbol (más lejos de la raíz) que los de menor precedencia."
+  },
+  {
+    "tema": "Desarrollo de Software de Base - Compiladores (Sobresaliente)",
+    "pregunta": "Un analizador sintáctico _______________ construye el árbol de análisis desde las hojas hacia la raíz y suele utilizar una técnica de desplazamiento-reducción (_shift-reduce_).",
+    "opciones": {
+      "A": "LL(1)",
+      "B": "LR",
+      "C": "Recursivo descendente"
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "Los analizadores LR son de tipo ascendente (Bottom-Up). Trabajan desplazando tokens a una pila y reduciéndolos a no terminales según las reglas gramaticales. LL y recursivo descendente son Top-Down."
+  },
+  {
+    "tema": "Desarrollo de Software de Base - Compiladores (Sobresaliente)",
+    "pregunta": "En la generación de código intermedio, la instrucción `t1 = inttofloat(60)` seguida de `t2 = id3 * t1` es un ejemplo de traducción de una expresión que requiere _______________ explícita de tipos.",
+    "opciones": {
+      "A": "conversión",
+      "B": "inferencia",
+      "C": "declaración"
+    },
+    "respuesta_correcta": "A",
+    "justificacion": "Cuando los tipos no coinciden (ej. multiplicar flotante por entero), el compilador debe generar instrucciones de conversión (casting) explícitas en el código intermedio para asegurar la corrección de la operación a nivel de máquina."
+  },
+  {
+    "tema": "Desarrollo de Software de Base - Compiladores (Sobresaliente)",
+    "pregunta": "Considere el siguiente fragmento de código de tres direcciones: `t1 = i * 8` y `t2 = a[t1]`. Esto corresponde a la traducción del acceso a un elemento de un arreglo `a[i]`, donde `8` representa el _______________ del tipo de datos de los elementos del arreglo.",
+    "opciones": {
+      "A": "valor base",
+      "B": "tamaño",
+      "C": "límite"
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "En la traducción de arreglos, la dirección de memoria se calcula como `base + índice * tamaño_elemento`. El `8` indica que cada elemento ocupa 8 unidades de memoria (bytes)."
+  },
+  {
+    "tema": "Desarrollo de Software de Base - Redes de Computadoras",
+    "pregunta": "En el modelo TCP/IP, ¿cuál es la capa responsable de proporcionar comunicación lógica extremo a extremo entre procesos de aplicación y que puede ofrecer servicios de fiabilidad y control de flujo?",
+    "opciones": {
+      "A": "Capa de Red",
+      "B": "Capa de Transporte",
+      "C": "Capa de Enlace"
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "La capa de Transporte (donde residen TCP y UDP) es la encargada de la comunicación host-to-host a nivel de procesos, manejando la fiabilidad y el control de flujo. La capa de red se encarga del enrutamiento entre hosts, no entre procesos específicos."
+  },
+  {
+    "tema": "Desarrollo de Software de Base - Redes de Computadoras",
+    "pregunta": "¿Cuál es el protocolo de la capa de aplicación utilizado para la resolución de nombres de dominio a direcciones IP?",
+    "opciones": {
+      "A": "DHCP",
+      "B": "HTTP",
+      "C": "DNS"
+    },
+    "respuesta_correcta": "C",
+    "justificacion": "DNS (Domain Name System) es el protocolo encargado de traducir nombres de dominio legibles por humanos a direcciones IP numéricas. DHCP asigna IPs dinámicamente y HTTP transfiere hipertexto."
+  },
+  {
+    "tema": "Desarrollo de Software de Base - Redes de Computadoras",
+    "pregunta": "¿Qué dispositivo de red opera principalmente en la Capa 2 (Enlace de Datos) del modelo OSI y utiliza direcciones MAC para filtrar y reenviar tramas?",
+    "opciones": {
+      "A": "Hub",
+      "B": "Router",
+      "C": "Switch"
+    },
+    "respuesta_correcta": "C",
+    "justificacion": "El Switch es un dispositivo de Capa 2 que toma decisiones de reenvío basándose en direcciones físicas (MAC). El Router es de Capa 3 (IP) y el Hub es de Capa 1 (física)."
+  },
+  {
+    "tema": "Desarrollo de Software de Base - Redes de Computadoras",
+    "pregunta": "¿Qué protocolo de la capa de transporte sería más adecuado para una aplicación de transmisión de video en tiempo real donde la velocidad es crítica y se tolera cierta pérdida de datos?",
+    "opciones": {
+      "A": "TCP",
+      "B": "UDP",
+      "C": "FTP"
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "UDP no tiene el overhead de establecimiento de conexión ni retransmisión de TCP, lo que lo hace ideal para aplicaciones sensibles al tiempo como el streaming o VoIP, donde es preferible perder un paquete que detener la transmisión."
+  },
+  {
+    "tema": "Desarrollo de Software de Base - Redes de Computadoras (Sobresaliente)",
+    "pregunta": "En el contexto de la seguridad de red, ¿qué característica distingue principalmente a IPsec de SSL/TLS?",
+    "opciones": {
+      "A": "IPsec opera en la capa de red cifrando todo el datagrama IP, mientras que SSL/TLS opera sobre la capa de transporte.",
+      "B": "SSL/TLS solo cifra la cabecera del paquete, mientras que IPsec cifra solo la carga útil.",
+      "C": "IPsec se utiliza exclusivamente para asegurar correos electrónicos, mientras que SSL/TLS asegura la web."
+    },
+    "respuesta_correcta": "A",
+    "justificacion": "IPsec es un protocolo de Capa 3 que asegura paquetes IP completos (ideal para VPNs), mientras que SSL/TLS opera en Capa 4/5 asegurando flujos de datos de aplicaciones específicas."
+  },
+  {
+    "tema": "Desarrollo de Software de Base - Redes de Computadoras (Sobresaliente)",
+    "pregunta": "¿Qué diferencia fundamental existe entre los protocolos de enrutamiento OSPF y BGP?",
+    "opciones": {
+      "A": "OSPF es un protocolo de vector de distancias, mientras que BGP es de estado de enlace.",
+      "B": "OSPF se utiliza para enrutamiento dentro de un sistema autónomo (Intra-AS), mientras que BGP se utiliza entre sistemas autónomos (Inter-AS).",
+      "C": "BGP garantiza la entrega más rápida posible, mientras que OSPF se centra en políticas de seguridad."
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "OSPF es un IGP (Interior Gateway Protocol) usado dentro de organizaciones. BGP es un EGP (Exterior Gateway Protocol) diseñado para conectar diferentes sistemas autónomos en Internet, manejando políticas y escalabilidad masiva."
+  },
+  {
+    "tema": "Desarrollo de Software de Base - Redes de Computadoras (Sobresaliente)",
+    "pregunta": "Para garantizar Calidad de Servicio (QoS) en una red convergente, ¿qué mecanismo se utiliza para clasificar y marcar paquetes a fin de darles tratamiento preferencial en los routers?",
+    "opciones": {
+      "A": "Control de congestión de TCP (Windowing).",
+      "B": "Servicios Diferenciados (DiffServ).",
+      "C": "Traducción de Direcciones de Red (NAT)."
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "DiffServ es una arquitectura de QoS que marca paquetes (usando el campo DS en la cabecera IP) para que los routers intermedios apliquen políticas de prioridad (per-hop behaviors) sin mantener estado por flujo."
+  },
+  {
+    "tema": "Desarrollo de Software de Base - Redes de Computadoras (Sobresaliente)",
+    "pregunta": "En una arquitectura definida por software (SDN), ¿cuál es el cambio fundamental respecto a las redes tradicionales?",
+    "opciones": {
+      "A": "La eliminación física de los cables de red.",
+      "B": "La separación del plano de control del plano de datos, centralizando la lógica de control.",
+      "C": "El uso exclusivo de IPv6 sobre IPv4."
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "SDN desacopla el plano de control (cerebro, software centralizado) del plano de datos (músculo, switches de reenvío), permitiendo programabilidad y gestión dinámica, a diferencia de los routers tradicionales monolíticos."
+  },
+  {
+    "tema": "Desarrollo de Software de Base - Redes de Computadoras",
+    "pregunta": "El protocolo _______________ es el estándar para la transferencia de archivos en Internet, permitiendo subir y bajar archivos de un servidor, mientras que _______________ es el protocolo utilizado para la asignación dinámica de direcciones IP a los dispositivos de una red.",
+    "opciones": {
+      "A": "DNS, SMTP",
+      "B": "HTTP, ARP",
+      "C": "FTP, DHCP"
+    },
+    "respuesta_correcta": "C",
+    "justificacion": "FTP (File Transfer Protocol) es para transferencia de archivos. DHCP (Dynamic Host Configuration Protocol) automatiza la configuración de red de los hosts."
+  },
+  {
+    "tema": "Desarrollo de Software de Base - Redes de Computadoras",
+    "pregunta": "En el modelo OSI, la capa de _______________ se encarga del direccionamiento físico y el acceso al medio, utilizando la dirección _______________ como identificador único de hardware.",
+    "opciones": {
+      "A": "Red, IP",
+      "B": "Enlace de Datos, MAC",
+      "C": "Transporte, Puerto"
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "La Capa 2 (Enlace) maneja el acceso al medio (como Ethernet) y usa direcciones MAC (Media Access Control) físicas grabadas en la tarjeta de red."
+  },
+  {
+    "tema": "Desarrollo de Software de Base - Redes de Computadoras",
+    "pregunta": "El mecanismo de _______________ permite que múltiples dispositivos en una red privada compartan una única dirección IP pública para acceder a Internet.",
+    "opciones": {
+      "A": "DNS (Domain Name System)",
+      "B": "NAT (Network Address Translation)",
+      "C": "ARP (Address Resolution Protocol)"
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "NAT traduce direcciones IP privadas a una pública (y viceversa), permitiendo la conservación de direcciones IPv4 y cierta seguridad por ocultamiento."
+  },
+  {
+    "tema": "Desarrollo de Software de Base - Redes de Computadoras",
+    "pregunta": "Para verificar la conectividad básica entre dos hosts y medir el tiempo de ida y vuelta, se utiliza la herramienta _______________, que emplea el protocolo _______________.",
+    "opciones": {
+      "A": "Telnet, TCP",
+      "B": "Traceroute, UDP",
+      "C": "Ping, ICMP"
+    },
+    "respuesta_correcta": "C",
+    "justificacion": "Ping es la herramienta de diagnóstico básica que envía mensajes de eco ICMP (Internet Control Message Protocol) para verificar si un destino es alcanzable."
+  },
+  {
+    "tema": "Desarrollo de Software de Base - Redes de Computadoras (Sobresaliente)",
+    "pregunta": "El establecimiento de una conexión TCP utiliza un proceso conocido como _______________, que involucra el intercambio de segmentos con los flags _______________, SYN-ACK y ACK.",
+    "opciones": {
+      "A": "Ventana deslizante, FIN",
+      "B": "Saludo de tres vías (Three-way handshake), SYN",
+      "C": "Encapsulamiento, PSH"
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "El \"Three-way handshake\" es el proceso fundamental de TCP: Cliente envía SYN, Servidor responde SYN-ACK, Cliente confirma ACK. Esto establece los números de secuencia iniciales."
+  },
+  {
+    "tema": "Desarrollo de Software de Base - Redes de Computadoras (Sobresaliente)",
+    "pregunta": "En el protocolo IPsec, el modo _______________ cifra solo la carga útil del paquete IP (dejando la cabecera original intacta), mientras que el modo _______________ cifra todo el paquete original y lo encapsula en uno nuevo, siendo este último el más común para VPNs.",
+    "opciones": {
+      "A": "Transporte, Túnel",
+      "B": "Túnel, Transporte",
+      "C": "Autenticación, Cifrado"
+    },
+    "respuesta_correcta": "A",
+    "justificacion": "El modo Transporte se usa para comunicaciones host-a-host (solo datos cifrados). El modo Túnel cifra todo el paquete IP original (datos + cabecera) y es el estándar para VPNs seguras entre redes."
+  },
+  {
+    "tema": "Desarrollo de Software de Base - Redes de Computadoras (Sobresaliente)",
+    "pregunta": "Para mitigar el agotamiento de direcciones IPv4, se desarrolló _______________, que utiliza direcciones de _______________ bits, ofreciendo un espacio de direccionamiento inmensamente mayor.",
+    "opciones": {
+      "A": "NAT, 64",
+      "B": "IPv6, 128",
+      "C": "IPv5, 256"
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "IPv6 es el sucesor de IPv4. IPv4 usa 32 bits (aprox 4 mil millones de direcciones). IPv6 usa 128 bits, permitiendo un número virtualmente infinito de direcciones."
+  },
+  {
+    "tema": "Desarrollo de Software de Base - Redes de Computadoras (Sobresaliente)",
+    "pregunta": "El protocolo _______________ es utilizado por los navegadores web para establecer una comunicación segura; este protocolo opera insertando una capa de seguridad entre la capa de _______________ y la de transporte.",
+    "opciones": {
+      "A": "SSH, Red",
+      "B": "HTTPS (SSL/TLS), Aplicación",
+      "C": "IPsec, Enlace"
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "HTTPS no es un protocolo nuevo, es HTTP sobre SSL/TLS. SSL/TLS se sitúa entre Aplicación y Transporte (TCP), cifrando los datos de la aplicación antes de que sean segmentados."
+  },
+  {
+    "tema": "Desarrollo de Software de Aplicación - Bases de Datos",
+    "pregunta": "¿Qué sentencia SQL se utiliza para modificar la estructura de una tabla existente, por ejemplo, para añadir una nueva columna?",
+    "opciones": {
+      "A": "UPDATE TABLE",
+      "B": "ALTER TABLE",
+      "C": "MODIFY TABLE"
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "Según el estándar SQL, `ALTER TABLE` es el comando DDL correcto para modificar la definición de una tabla base, como añadir columnas o restricciones. `UPDATE` es DML para datos, y `MODIFY` no es el comando estándar de nivel tabla."
+  },
+  {
+    "tema": "Desarrollo de Software de Aplicación - Bases de Datos",
+    "pregunta": "En el modelo relacional, ¿cómo se denomina a la restricción que establece que ninguna clave primaria puede tener un valor NULO?",
+    "opciones": {
+      "A": "Integridad Referencial",
+      "B": "Integridad de Dominio",
+      "C": "Integridad de Entidad"
+    },
+    "respuesta_correcta": "C",
+    "justificacion": "La regla de **Integridad de Entidad** establece que ningún valor de clave primaria puede ser NULL, ya que la clave primaria se usa para identificar tuplas individuales. La referencial trata sobre claves foráneas."
+  },
+  {
+    "tema": "Desarrollo de Software de Aplicación - Bases de Datos",
+    "pregunta": "¿Cuál es el objetivo principal de aplicar la Primera Forma Normal (1FN) a una relación?",
+    "opciones": {
+      "A": "Eliminar dependencias transitivas",
+      "B": "Asegurar la atomicidad de los atributos",
+      "C": "Eliminar dependencias parciales"
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "La definición de **1FN** establece que el dominio de un atributo debe incluir solo valores atómicos (simples e indivisibles), eliminando grupos repetitivos o atributos multivaluados."
+  },
+  {
+    "tema": "Desarrollo de Software de Aplicación - Bases de Datos",
+    "pregunta": "En un diagrama Entidad-Relación, ¿qué representa un rombo?",
+    "opciones": {
+      "A": "Un tipo de Entidad",
+      "B": "Un tipo de Relación",
+      "C": "Un Atributo derivado"
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "En la notación estándar ER (Chen), los rectángulos representan entidades y los **rombos** representan tipos de relación entre entidades."
+  },
+  {
+    "tema": "Desarrollo de Software de Aplicación - Bases de Datos (Sobresaliente)",
+    "pregunta": "En el contexto de bases de datos distribuidas, si se divide una relación `ALUMNOS` seleccionando solo aquellos registros donde la carrera sea \"Sistemas\", ¿qué tipo de fragmentación se está aplicando?",
+    "opciones": {
+      "A": "Fragmentación Vertical",
+      "B": "Fragmentación Horizontal",
+      "C": "Fragmentación Mixta"
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "La **fragmentación horizontal** divide una relación en subconjuntos de tuplas (filas) mediante una operación de selección ($\\sigma$) basada en una condición (ej. Carrera = 'Sistemas')."
+  },
+  {
+    "tema": "Desarrollo de Software de Aplicación - Bases de Datos (Sobresaliente)",
+    "pregunta": "Una relación está en Tercera Forma Normal (3FN) si está en 2FN y además:",
+    "opciones": {
+      "A": "Todos sus atributos son atómicos.",
+      "B": "No existen dependencias funcionales transitivas de atributos no clave hacia la clave primaria.",
+      "C": "Todo determinante es una clave candidata."
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "La definición de **3FN** requiere eliminar las dependencias transitivas, donde un atributo no clave depende de otro no clave. La opción C corresponde a BCNF."
+  },
+  {
+    "tema": "Desarrollo de Software de Aplicación - Bases de Datos (Sobresaliente)",
+    "pregunta": "¿Cuál es la diferencia fundamental entre un sistema OLTP (Procesamiento de Transacciones en Línea) y un Data Warehouse?",
+    "opciones": {
+      "A": "OLTP es para datos históricos y Data Warehouse para datos actuales.",
+      "B": "OLTP se orienta a aplicaciones operativas y Data Warehouse a la toma de decisiones.",
+      "C": "OLTP utiliza esquemas en estrella y Data Warehouse esquemas normalizados."
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "Los sistemas **OLTP** están optimizados para transacciones diarias y rápidas (operacionales). El **Data Warehouse** almacena datos históricos, integrados y no volátiles para el análisis y soporte a decisiones (OLAP)."
+  },
+  {
+    "tema": "Desarrollo de Software de Aplicación - Bases de Datos (Sobresaliente)",
+    "pregunta": "¿Qué propiedad de las transacciones (ACID) garantiza que, una vez confirmada una transacción, sus cambios persisten incluso ante fallos del sistema?",
+    "opciones": {
+      "A": "Atomicidad",
+      "B": "Aislamiento",
+      "C": "Durabilidad"
+    },
+    "respuesta_correcta": "C",
+    "justificacion": "La **Durabilidad** asegura que los cambios de una transacción confirmada (committed) deben persistir en la base de datos y no perderse por fallos posteriores."
+  },
+  {
+    "tema": "Desarrollo de Software de Aplicación - Bases de Datos",
+    "pregunta": "Complete la sentencia SQL para obtener el nombre de los empleados que ganan más de 20,000: `SELECT Nombre ____ EMPLEADO ____ Sueldo > 20000;`",
+    "opciones": {
+      "A": "IN - IF",
+      "B": "FROM - WHERE",
+      "C": "ON - HAVING"
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "La estructura básica de consulta SQL es `SELECT ... FROM ... WHERE`. `FROM` especifica la tabla y `WHERE` la condición de filtrado de filas."
+  },
+  {
+    "tema": "Desarrollo de Software de Aplicación - Bases de Datos",
+    "pregunta": "Una _______________ es una columna o conjunto de columnas en una tabla cuyos valores coinciden con los valores de la clave primaria de otra tabla, estableciendo una relación entre ambas.",
+    "opciones": {
+      "A": "Clave Candidata",
+      "B": "Clave Foránea (Foreign Key)",
+      "C": "Superclave"
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "La **Clave Foránea** es el mecanismo del modelo relacional para establecer relaciones entre tablas, referenciando la clave primaria de otra tabla."
+  },
+  {
+    "tema": "Desarrollo de Software de Aplicación - Bases de Datos",
+    "pregunta": "El modelo _______________ representa los datos como una colección de tablas, donde cada tabla tiene un nombre único y consiste en filas y columnas.",
+    "opciones": {
+      "A": "Entidad-Relación",
+      "B": "Jerárquico",
+      "C": "Relacional"
+    },
+    "respuesta_correcta": "C",
+    "justificacion": "El **Modelo Relacional** se define por el uso de relaciones (tablas) para representar datos y las asociaciones entre ellos."
+  },
+  {
+    "tema": "Desarrollo de Software de Aplicación - Bases de Datos",
+    "pregunta": "La operación del álgebra relacional que produce un conjunto con todas las tuplas que están en la relación R o en la relación S (o en ambas) se denomina _______________ y se denota como $R \\cup S$.",
+    "opciones": {
+      "A": "Intersección",
+      "B": "Unión",
+      "C": "Diferencia"
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "La **Unión** ($\\cup$) es la operación de conjuntos que combina tuplas de dos relaciones compatibles, incluyendo aquellas presentes en una, en otra o en ambas."
+  },
+  {
+    "tema": "Desarrollo de Software de Aplicación - Bases de Datos (Sobresaliente)",
+    "pregunta": "Para reconstruir la relación original R a partir de sus fragmentos obtenidos por **fragmentación vertical**, se debe utilizar la operación de _______________ sobre el atributo de clave primaria que se replicó en todos los fragmentos.",
+    "opciones": {
+      "A": "Unión (Union)",
+      "B": "Junta Natural (Natural Join)",
+      "C": "Selección (Select)"
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "En la fragmentación vertical, se dividen los atributos. Para reconstruir la tupla completa, se necesita hacer un **Join (Junta)** utilizando la clave primaria que debe estar presente en todos los fragmentos verticales."
+  },
+  {
+    "tema": "Desarrollo de Software de Aplicación - Bases de Datos (Sobresaliente)",
+    "pregunta": "Un esquema de relación R está en _______________ si, y solo si, siempre que existe una dependencia funcional $X \\rightarrow A$ válida en R, entonces $X$ es una superclave de R.",
+    "opciones": {
+      "A": "Segunda Forma Normal (2FN)",
+      "B": "Tercera Forma Normal (3FN)",
+      "C": "Forma Normal de Boyce-Codd (BCNF)"
+    },
+    "respuesta_correcta": "C",
+    "justificacion": "Esta es la definición formal de **BCNF**, que es más estricta que la 3FN y elimina anomalías causadas por dependencias funcionales donde el determinante no es una clave candidata."
+  },
+  {
+    "tema": "Desarrollo de Software de Aplicación - Bases de Datos (Sobresaliente)",
+    "pregunta": "En el contexto de bases de datos distribuidas, la transparencia de _______________ permite al usuario acceder a los datos sin saber si están particionados o replicados en diferentes nodos.",
+    "opciones": {
+      "A": "Ubicación",
+      "B": "Fragmentación",
+      "C": "Concurrencia"
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "La **transparencia de fragmentación** asegura que el usuario no necesita saber cómo están fragmentados los datos (si es horizontal o vertical) ni dónde residen los fragmentos; el sistema maneja la reconstrucción automáticamente."
+  },
+  {
+    "tema": "Desarrollo de Software de Aplicación - Bases de Datos (Sobresaliente)",
+    "pregunta": "El proceso conocido como _______________ (Knowledge Discovery in Databases) incluye etapas de selección, preprocesamiento, transformación, minería de datos e interpretación.",
+    "opciones": {
+      "A": "KDD",
+      "B": "ETL",
+      "C": "OLAP"
+    },
+    "respuesta_correcta": "A",
+    "justificacion": "**KDD** es el proceso general de descubrimiento de conocimiento, del cual la minería de datos es una fase específica. ETL se refiere solo a la carga de Data Warehouses."
+  },
+  {
+    "tema": "Desarrollo de Software de Aplicación - Seguridad Informática",
+    "pregunta": "Un desarrollador necesita asegurar que los mensajes enviados entre dos sucursales bancarias no sean leídos por interceptores en la red pública. ¿Qué propiedad de la seguridad informática debe priorizar?",
+    "opciones": {
+      "A": "Integridad",
+      "B": "Disponibilidad",
+      "C": "Confidencialidad"
+    },
+    "respuesta_correcta": "C",
+    "justificacion": "La confidencialidad se refiere específicamente a prevenir que la información sea revelada a entidades no autorizadas (como interceptores). La integridad evitaría la modificación, y la disponibilidad aseguraría el acceso, pero la \"lectura no autorizada\" es un problema de confidencialidad."
+  },
+  {
+    "tema": "Desarrollo de Software de Aplicación - Seguridad Informática",
+    "pregunta": "En el contexto de seguridad informática, ¿cómo se define una vulnerabilidad?",
+    "opciones": {
+      "A": "Es una debilidad en el sistema que permite a un atacante reducir la seguridad de la información.",
+      "B": "Es un evento potencial que puede causar daño a los activos de la organización.",
+      "C": "Es la probabilidad de que una amenaza se materialice causando un impacto negativo."
+    },
+    "respuesta_correcta": "A",
+    "justificacion": "Una vulnerabilidad es una debilidad intrínseca (fallo de diseño, error de código). La opción B define una amenaza y la C define un riesgo."
+  },
+  {
+    "tema": "Desarrollo de Software de Aplicación - Seguridad Informática",
+    "pregunta": "¿Qué tipo de malware se caracteriza por ser un programa que aparenta tener una función útil pero que contiene código malicioso oculto que se ejecuta al iniciar el programa?",
+    "opciones": {
+      "A": "Gusano (Worm)",
+      "B": "Caballo de Troya",
+      "C": "Virus polimórfico"
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "El Caballo de Troya se define por disfrazarse de software legítimo para engañar al usuario y ejecutar acciones maliciosas. Los gusanos se replican por red y los virus infectan otros archivos."
+  },
+  {
+    "tema": "Desarrollo de Software de Aplicación - Seguridad Informática",
+    "pregunta": "Para proteger una base de datos de accesos no autorizados, el administrador decide implementar un sistema donde el acceso a los objetos se basa en la identidad del usuario y reglas explícitas definidas por el propietario del objeto. ¿Qué tipo de control de acceso es este?",
+    "opciones": {
+      "A": "Control de Acceso Obligatorio (MAC)",
+      "B": "Control de Acceso Discrecional (DAC)",
+      "C": "Control de Acceso Basado en Roles (RBAC)"
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "En el DAC (Discretionary Access Control), el propietario del recurso tiene la discreción de otorgar o revocar permisos a otros usuarios."
+  },
+  {
+    "tema": "Desarrollo de Software de Aplicación - Seguridad Informática (Sobresaliente)",
+    "pregunta": "Una empresa de comercio electrónico desea implementar un sistema de no repudio para sus transacciones de alto valor. ¿Qué mecanismo criptográfico garantiza que el emisor de una orden de compra no pueda negar posteriormente haberla enviado?",
+    "opciones": {
+      "A": "Cifrado simétrico con AES-256",
+      "B": "Firma digital utilizando la clave privada del emisor",
+      "C": "Hash MD5 del mensaje de la orden"
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "La firma digital proporciona autenticidad, integridad y no repudio. Al firmar con la clave privada (que solo el emisor posee), se garantiza matemáticamente que solo él pudo generar la firma. El cifrado simétrico (A) no prueba identidad única y el Hash (C) solo prueba integridad."
+  },
+  {
+    "tema": "Desarrollo de Software de Aplicación - Seguridad Informática (Sobresaliente)",
+    "pregunta": "Durante una auditoría de código, se identifica que una aplicación web concatena directamente las entradas del usuario en las cadenas de consulta a la base de datos sin validación. ¿A qué vulnerabilidad crítica está expuesta la aplicación y cuál es la mitigación correcta?",
+    "opciones": {
+      "A": "Cross-Site Scripting (XSS); usar HTTPS.",
+      "B": "Desbordamiento de búfer; usar canarios de pila.",
+      "C": "Inyección SQL; usar consultas parametrizadas (prepared statements)."
+    },
+    "respuesta_correcta": "C",
+    "justificacion": "La concatenación directa de entradas en consultas SQL permite la Inyección SQL. La solución técnica estándar es el uso de consultas parametrizadas donde la entrada se trata estrictamente como datos, no como código ejecutable."
+  },
+  {
+    "tema": "Desarrollo de Software de Aplicación - Seguridad Informática (Sobresaliente)",
+    "pregunta": "Un sistema crítico de control industrial requiere que la información fluya únicamente desde niveles de seguridad bajos hacia niveles altos para mantener la confidencialidad (modelo Bell-LaPadula). Si un proceso tiene un nivel de seguridad \"Secreto\", ¿qué operación le está permitida sobre un objeto clasificado como \"Top Secret\"?",
+    "opciones": {
+      "A": "Lectura (Read Up)",
+      "B": "Escritura (Write Up)",
+      "C": "Ejecución y modificación"
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "El modelo Bell-LaPadula aplica la regla \"No Read Up\" (no leer niveles superiores) y \"No Write Down\" (no escribir en niveles inferiores). Por lo tanto, un nivel inferior (Secreto) puede escribir hacia arriba (Top Secret) sin violar la confidencialidad del nivel superior, pero no puede leer."
+  },
+  {
+    "tema": "Desarrollo de Software de Aplicación - Seguridad Informática (Sobresaliente)",
+    "pregunta": "Se está diseñando una base de datos distribuida con requisitos estrictos de seguridad. Se debe implementar un control donde los permisos se asignen a funciones laborales y los usuarios hereden estos permisos al ser asignados a dichas funciones. ¿Cuál es la ventaja principal de este modelo (RBAC) sobre DAC en una organización con alta rotación de personal?",
+    "opciones": {
+      "A": "Permite que los usuarios definan sus propias políticas de seguridad de manera flexible.",
+      "B": "Reduce la carga administrativa al gestionar permisos por grupos funcionales en lugar de usuario por usuario.",
+      "C": "Garantiza que los datos estén etiquetados con niveles de sensibilidad obligatorios por el sistema operativo."
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "RBAC (Role-Based Access Control) facilita la gestión en grandes organizaciones. Al cambiar de personal, solo se cambia la asignación del usuario al rol, sin necesidad de reconfigurar los permisos de cada objeto individualmente, lo cual es la principal desventaja administrativa de DAC."
+  },
+  {
+    "tema": "Desarrollo de Software de Aplicación - Seguridad Informática",
+    "pregunta": "En el análisis de riesgos de seguridad informática, se define _______________ como la probabilidad de que una amenaza explote una vulnerabilidad causando una pérdida.",
+    "opciones": {
+      "A": "el impacto",
+      "B": "el activo",
+      "C": "el riesgo"
+    },
+    "respuesta_correcta": "C",
+    "justificacion": "El riesgo es el producto de la probabilidad de ocurrencia por el impacto. La definición dada corresponde exactamente al concepto de riesgo en seguridad."
+  },
+  {
+    "tema": "Desarrollo de Software de Aplicación - Seguridad Informática",
+    "pregunta": "Un ataque de _______________ consiste en saturar los recursos de un sistema (como ancho de banda o capacidad de procesamiento) para que este deje de responder a las peticiones legítimas de los usuarios.",
+    "opciones": {
+      "A": "denegación de servicio (DoS)",
+      "B": "phishing",
+      "C": "inyección de código"
+    },
+    "respuesta_correcta": "A",
+    "justificacion": "El objetivo de un ataque DoS (Denial of Service) es comprometer la disponibilidad del sistema saturándolo, impidiendo el acceso legítimo."
+  },
+  {
+    "tema": "Desarrollo de Software de Aplicación - Seguridad Informática",
+    "pregunta": "El protocolo _______________ es una versión segura de HTTP que utiliza SSL/TLS para cifrar la comunicación entre el navegador web y el servidor, garantizando la confidencialidad de los datos transmitidos.",
+    "opciones": {
+      "A": "SFTP",
+      "B": "HTTPS",
+      "C": "IPSec"
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "HTTPS (Hypertext Transfer Protocol Secure) es el estándar para la navegación web segura mediante cifrado."
+  },
+  {
+    "tema": "Desarrollo de Software de Aplicación - Seguridad Informática",
+    "pregunta": "Para garantizar la integridad de un archivo descargado de internet, se suele comparar su _______________ calculado con el valor proporcionado por el desarrollador original.",
+    "opciones": {
+      "A": "cifrado asimétrico",
+      "B": "resumen hash (checksum)",
+      "C": "certificado digital"
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "Las funciones hash (como MD5 o SHA-256) generan una cadena única (resumen) para un archivo. Si el archivo cambia un solo bit, el hash cambia drásticamente, sirviendo para verificar integridad."
+  },
+  {
+    "tema": "Desarrollo de Software de Aplicación - Seguridad Informática (Sobresaliente)",
+    "pregunta": "En un esquema de Criptografía de Clave Pública (PKI), si el Usuario A desea enviar un mensaje confidencial al Usuario B, el Usuario A debe cifrar el mensaje utilizando la _______________, y el Usuario B lo descifrará utilizando su _______________.",
+    "opciones": {
+      "A": "clave pública de B / clave privada de B",
+      "B": "clave privada de A / clave pública de A",
+      "C": "clave pública de A / clave privada de B"
+    },
+    "respuesta_correcta": "A",
+    "justificacion": "Para confidencialidad en criptografía asimétrica, se cifra con la clave pública del destinatario (que cualquiera puede conocer) para que solo el destinatario, con su clave privada (secreta), pueda leerlo."
+  },
+  {
+    "tema": "Desarrollo de Software de Aplicación - Seguridad Informática (Sobresaliente)",
+    "pregunta": "La técnica de _______________ implica la inserción de instrucciones \"no-operation\" (NOP) seguidas de código malicioso en la pila de memoria, aprovechando una vulnerabilidad de desbordamiento de búfer para alterar el puntero de instrucción y ejecutar el código inyectado.",
+    "opciones": {
+      "A": "cross-site scripting",
+      "B": "buffer overflow (desbordamiento de búfer)",
+      "C": "man-in-the-middle"
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "Esta es la mecánica técnica precisa de un ataque de desbordamiento de búfer clásico (stack-based buffer overflow), donde se sobrescribe la dirección de retorno para apuntar al shellcode del atacante."
+  },
+  {
+    "tema": "Desarrollo de Software de Aplicación - Seguridad Informática (Sobresaliente)",
+    "pregunta": "Un firewall con _______________ no solo examina las cabeceras de los paquetes individuales, sino que también mantiene un registro de las conexiones activas (TCP handshake) para tomar decisiones de filtrado basadas en el contexto de la comunicación.",
+    "opciones": {
+      "A": "filtrado de paquetes estático",
+      "B": "inspección de estado (stateful inspection)",
+      "C": "proxy de aplicación"
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "Los firewalls de inspección de estado (stateful) monitorean el estado de las conexiones activas y usan esa información para determinar qué paquetes de red permitir a través del firewall, siendo más seguros que los filtros estáticos."
+  },
+  {
+    "tema": "Desarrollo de Software de Aplicación - Seguridad Informática (Sobresaliente)",
+    "pregunta": "En el contexto de la seguridad de bases de datos, el principio de _______________ establece que a un usuario o proceso solo se le deben otorgar los permisos estrictamente necesarios para realizar su trabajo y nada más.",
+    "opciones": {
+      "A": "defensa en profundidad",
+      "B": "mínimo privilegio",
+      "C": "seguridad por oscuridad"
+    },
+    "respuesta_correcta": "B",
+    "justificacion": "El principio de mínimo privilegio es fundamental en el diseño de sistemas seguros para limitar el daño potencial en caso de un compromiso de cuenta."
+  }
+]

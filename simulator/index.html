@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simulador de Cuestionario EGEL Plus</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- MathJax para LaTeX -->
+    <script
+      type="text/javascript"
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <!-- Marked.js para Markdown -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  </head>
+  <body>
+    <div id="quiz-container">
+      <h1>Simulador EGEL Plus - Ciencias Computacionales</h1>
+
+      <div id="controls">
+        <p>
+          <strong>Puntuación:</strong> <span id="score">0</span> /
+          <span id="total-questions">0</span>
+        </p>
+        <p>
+          <strong>Pregunta:</strong> <span id="current-q-index">0</span> /
+          <span id="total-q-count">0</span>
+        </p>
+        <p><strong>Tema:</strong> <span id="question-topic"></span></p>
+      </div>
+
+      <div id="question-card" class="card">
+        <div id="question-text">Cargando pregunta...</div>
+
+        <div id="options-container" class="options"></div>
+
+        <div id="justification-box" class="justification-hidden">
+          <strong>Justificación:</strong>
+          <div id="justification-text"></div>
+        </div>
+      </div>
+
+      <div id="navigation">
+        <button id="prev-btn" disabled>← Anterior</button>
+        <button id="next-btn" disabled>Siguiente →</button>
+        <button id="finish-btn" disabled>Finalizar Cuestionario</button>
+      </div>
+
+      <div id="results-screen" class="card hidden">
+        <h2>Resultados Finales</h2>
+        <p>Has completado el cuestionario.</p>
+        <p>
+          Tu puntuación final es de
+          <strong id="final-score">0</strong> preguntas correctas de un total de
+          <strong id="final-total">0</strong>.
+        </p>
+        <button id="restart-btn">Reiniciar Cuestionario</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
