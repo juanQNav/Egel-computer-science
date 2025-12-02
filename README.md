@@ -1,6 +1,8 @@
 # Computer Science
 
-Este es un compilado de temas sobre la carrera de Computer Science.
+Es un compilado de temas acerca ciencias de la computación basado en la guía
+de estudio
+para EGEL Plus COMPU.
 
 ## Áreas
 
