@@ -135,3 +135,11 @@ Este es un compilado de temas sobre la carrera de Computer Science.
   la arquitectura de la red de cómputo distribuido; así como
   valorar la solución a un problema mediante un algoritmo
   de búsqueda y la arquitectura de Grid computing
+
+## Simulador de EGEL
+
+Para ejecutar el simulador
+
+```bash
+npx serve .
+```
