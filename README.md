@@ -7,23 +7,23 @@ Este es un compilado de temas sobre la carrera de Computer Science.
 <!-- format:off -->
 
 1. Algoritmia
-   1. [Análisis y diseño de algoritmos](1_Algoritmia/1_Analisis_diseño_Algoritmos.md)
+   1. [Análisis y diseño de algoritmos](1_Algoritmia/1_Analisis_Diseño_Algoritmos.md)
    2. [Estructuras de datos](1_Algoritmia/2_Estructuras_Datos.md)
    3. [Matemáticas discretas](1_Algoritmia/3_Matematicas_Discretas.md)
    4. [Lógica computacional](1_Algoritmia/4_Logica_Computacional.md)
 1. Desarrollo de software de base
-   1. [Arquitectura de computadoras y sistemas operativos](2_Software_Base/1_Arquitectura_Sistemas_Operativos.md)
-   2. [Compiladores](2_Software_Base/2_Compiladores.md)
-   3. [Redes de Computadoras](2_Software_Base/3_Redes_Computadoras.md)
+   1. [Arquitectura de computadoras y sistemas operativos](2_Desarrollo_de_software_de_base/1_Arquitectura_Computadoras_Sistemas_Operativos.md)
+   2. [Compiladores](2_Desarrollo_de_software_base/2_Compiladores.md)
+   3. [Redes de Computadoras](2_Desarrollo_de_software_base/3_Redes_Computadoras.md)
 1. Desarrollo de software de aplicación
-   1. [Ingeniería de software](3_Software_Aplicacion/1_Ingenieria_Software.md)
-   2. [Lenguajes de programación](3_Software_Aplicacion/2_Lenguajes_Programacion.md)
-   3. [Bases de datos](3_Software_Aplicacion/3_Bases_Datos.md)
-   4. [Seguridad informática](3_Software_Aplicacion/4_Seguridad_Informatica.md)
+   1. [Ingeniería de software](3_Desarrollo_de_software_de_Apliacion/1_Ingenieria_Software.md)
+   2. [Lenguajes de programación](3_Desarrollo_de_software_de_Apliacion/2_Lenguajes_Programacion.md)
+   3. [Bases de datos](3_Desarrollo_de_software_de_Apliacion/3_Bases_Datos.md)
+   4. [Seguridad informática](3_Desarrollo_de_software_de_Apliacion/4_Seguridad_Informatica.md)
 1. Soluciones de cómputo inteligente
-   1. [Inteligencia artificial](4_Computo_Inteligente/1_Inteligencia_Artificial.md)
-   2. [Minería de datos](4_Computo_Inteligente/2_Mineria_Datos.md)
-   3. [Cómputo distribuido](4_Computo_Inteligente/3_Computo_Distribuido.md)
+   1. [Inteligencia artificial](4_Soluciones_de_computo_inteligente/1_Inteligencia_Artificial.md)
+   2. [Minería de datos](4_Soluciones_de_computo_inteligente/2_Mineria_Datos.md)
+   3. [Cómputo distribuido](4_Soluciones_de_computo_inteligente/3_Computo_Distribuido.md)
 
 ## Descriptores de los niveles de desempeño de las áreas disciplinares
 
