@@ -389,7 +389,7 @@ Aplicando ley de absorción ($X + \bar{X}Y = X + Y$): $A(B + C)$.
 ###### Reactivo 15
 
 En el análisis de un algoritmo, se obtiene la función de tiempo $f(n) = 3n^2 + 10n \log n + 500$.
-La clasificación $\Theta$ (orden exacto) que completa correctamente el análisis es $\Theta(\text{\_\_\_})$.
+La clasificación $\Theta$ (orden exacto) que completa correctamente el análisis es $\Theta(\verb|___|)$.
 
 A) $n \log n$
 
