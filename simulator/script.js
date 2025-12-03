@@ -1,4 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
+  marked.setOptions({
+    breaks: true, // this convert \n en <br>
+    gfm: true,
+  });
   let originalQuestions = [];
   let currentQuestions = [];
   let currentQuestionIndex = 0;
