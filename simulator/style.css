@@ -1,74 +1,113 @@
+/* --- ESTILOS BASE RESPONSIVE --- */
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Arial", sans-serif;
   background-color: #f4f7f6;
   color: #333;
   display: flex;
   justify-content: center;
-  padding: 20px;
+  padding: 15px;
+  min-height: 100vh;
+  margin: 0;
 }
 
 #quiz-container {
   width: 100%;
-  max-width: 800px;
+  max-width: 900px;
+  min-width: 280px;
   background: #fff;
-  padding: 30px;
+  padding: clamp(15px, 3vw, 30px);
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin: auto;
 }
 
 h1 {
   text-align: center;
   color: #007bff;
-  margin-bottom: 20px;
+  margin-bottom: clamp(15px, 3vw, 20px);
   border-bottom: 2px solid #e9ecef;
-  padding-bottom: 10px;
+  padding-bottom: clamp(8px, 2vw, 10px);
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  line-height: 1.3;
 }
 
+/* --- CONTROLES RESPONSIVE --- */
 #controls {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  gap: 10px 20px;
   padding: 10px 0;
   margin-bottom: 15px;
-  font-size: 1.1em;
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+}
+
+#controls p {
+  margin: 5px 0;
+  min-width: 120px;
+  flex: 1;
 }
 
 #question-topic {
   font-weight: bold;
   color: #28a745;
+  word-break: break-word;
 }
 
+/* --- TARJETA DE PREGUNTA --- */
 .card {
   background-color: #e9ecef;
-  padding: 25px;
+  padding: clamp(15px, 4vw, 25px);
   border-radius: 8px;
   margin-bottom: 20px;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 #question-text {
-  font-size: 1.2em;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
   margin-bottom: 20px;
   font-weight: 500;
   line-height: 1.6;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
-/* Styling for mathematical expressions */
+/* Ajustes para contenido matemático largo */
 .MathJax {
-  font-size: 1.1em;
+  font-size: 1em !important;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 2px 0;
 }
 
+.mjx-chtml {
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+}
+
+/* --- OPCIONES RESPONSIVE --- */
 .option {
   display: flex;
   align-items: flex-start;
   margin-bottom: 10px;
-  padding: 12px;
+  padding: clamp(10px, 3vw, 12px);
   background-color: #fff;
   border: 1px solid #ced4da;
   border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.2s;
   min-height: 60px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .option:hover:not(.disabled):not(.correct):not(.incorrect) {
@@ -94,42 +133,85 @@ h1 {
 .option-text {
   flex-grow: 1;
   line-height: 1.6;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  padding-right: 5px;
 }
 
-/* Adjust spacing for options with complex content */
 .option .option-text p {
   margin: 0;
 }
 
-/* Justification styles */
+/* Botones de radio responsivos */
+.option input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: clamp(18px, 4vw, 20px);
+  height: clamp(18px, 4vw, 20px);
+  min-width: 18px;
+  min-height: 18px;
+  border-radius: 50%;
+  border: 2px solid #6c757d;
+  background-color: #fff;
+  transition:
+    border-color 0.2s,
+    background-color 0.2s;
+  flex-shrink: 0;
+  margin-top: 3px;
+  margin-right: clamp(8px, 2vw, 12px);
+}
+
+.option input[type="radio"]:checked {
+  border: 6px solid #007bff;
+}
+
+.option.correct input[type="radio"]:checked {
+  border-color: #28a745;
+  background-color: #d4edda;
+}
+
+.option.incorrect input[type="radio"]:checked {
+  border-color: #dc3545;
+  background-color: #f8d7da;
+}
+
+/* --- JUSTIFICACIÓN --- */
 #justification-box {
   margin-top: 20px;
-  padding: 15px;
+  padding: clamp(12px, 3vw, 15px);
   border-radius: 6px;
   background-color: #f0f8ff;
   border-left: 5px solid #007bff;
   line-height: 1.5;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .justification-hidden {
   display: none;
 }
 
-/* Navigation styles */
+/* --- NAVEGACIÓN RESPONSIVE --- */
 #navigation {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  gap: 10px;
 }
 
 #navigation button {
-  padding: 10px 20px;
+  padding: clamp(8px, 2vw, 10px) clamp(15px, 3vw, 20px);
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  font-size: 1em;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
   transition:
     background-color 0.2s,
     opacity 0.2s;
+  flex: 1;
+  min-width: 120px;
+  white-space: nowrap;
 }
 
 #prev-btn,
@@ -146,6 +228,8 @@ h1 {
 #finish-btn {
   background-color: #dc3545;
   color: white;
+  order: 3;
+  min-width: 100%;
 }
 
 #finish-btn:hover:not(:disabled) {
@@ -157,7 +241,7 @@ h1 {
   cursor: default;
 }
 
-/* Results and restart styles */
+/* --- RESULTADOS --- */
 #results-screen {
   text-align: center;
   background-color: #d4edda;
@@ -167,51 +251,193 @@ h1 {
 
 #results-screen h2 {
   color: #28a745;
+  font-size: clamp(1.5rem, 4vw, 1.8rem);
+}
+
+#results-screen p {
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
+  margin: 10px 0;
 }
 
 #restart-btn {
   background-color: #007bff;
   color: white;
-  padding: 12px 25px;
+  padding: clamp(10px, 2vw, 12px) clamp(20px, 4vw, 25px);
   border-radius: 6px;
   border: none;
   cursor: pointer;
-  font-size: 1.1em;
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
   margin-top: 15px;
+  min-width: 200px;
 }
 
 .hidden {
   display: none !important;
 }
 
-/* Radio button option styles */
-.option input[type="radio"] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  border: 2px solid #6c757d;
-  background-color: #fff;
-  transition:
-    border-color 0.2s,
-    background-color 0.2s;
-  flex-shrink: 0;
-  margin-top: 3px;
-  margin-right: 12px;
+/* --- MEDIA QUERIES ESPECÍFICAS --- */
+
+/* Tablets y móviles grandes */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  #controls {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  #controls p {
+    min-width: 100%;
+    text-align: left;
+  }
+
+  #navigation {
+    flex-direction: column;
+  }
+
+  #navigation button {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  #finish-btn {
+    order: 3;
+    margin-top: 5px;
+  }
+
+  .option {
+    flex-direction: row;
+    align-items: flex-start;
+  }
 }
 
-.option input[type="radio"]:checked {
-  border: 6px solid #007bff;
+/* Móviles pequeños */
+@media (max-width: 480px) {
+  body {
+    padding: 8px;
+  }
+
+  #quiz-container {
+    padding: 12px;
+  }
+
+  .card {
+    padding: 12px;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  #question-text {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .option {
+    padding: 10px;
+    min-height: auto;
+    align-items: center;
+  }
+
+  .option input[type="radio"] {
+    margin-right: 8px;
+  }
+
+  /* Ajustes para MathJax en móviles */
+  .mjx-chtml {
+    font-size: 90% !important;
+  }
+
+  .MathJax {
+    font-size: 0.9em !important;
+  }
+
+  /* Scroll horizontal para fórmulas muy largas */
+  .card {
+    overflow-x: auto;
+  }
 }
 
-.option.correct input[type="radio"]:checked {
-  border-color: #28a745;
-  background-color: #d4edda;
+/* Pantallas muy grandes */
+@media (min-width: 1200px) {
+  #quiz-container {
+    max-width: 1000px;
+  }
+
+  #question-text {
+    font-size: 1.25rem;
+  }
 }
 
-.option.incorrect input[type="radio"]:checked {
-  border-color: #dc3545;
-  background-color: #f8d7da;
+/* Ajustes para modo landscape en móviles */
+@media (max-height: 600px) and (orientation: landscape) {
+  body {
+    padding: 5px;
+  }
+
+  #quiz-container {
+    padding: 15px;
+  }
+
+  .card {
+    padding: 15px;
+    margin-bottom: 10px;
+  }
+
+  .option {
+    min-height: 50px;
+    padding: 8px 12px;
+    margin-bottom: 8px;
+  }
+}
+
+/* Soporte para dark mode del sistema */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+  }
+
+  #quiz-container {
+    background-color: #2d2d2d;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  .card {
+    background-color: #3d3d3d;
+  }
+
+  .option {
+    background-color: #2d2d2d;
+    border-color: #4d4d4d;
+  }
+
+  .option:hover:not(.disabled):not(.correct):not(.incorrect) {
+    background-color: #353535;
+  }
+
+  .option.correct {
+    background-color: #1e4620;
+    border-color: #2d6a31;
+    color: #90ee90;
+    font-weight: bold;
+  }
+
+  .option.incorrect {
+    background-color: #4a1e1e;
+    border-color: #6a2d2d;
+    color: #ff9999;
+  }
+
+  .option.disabled {
+    pointer-events: none;
+    cursor: default;
+  }
+  #justification-box {
+    color: #333;
+  }
 }
