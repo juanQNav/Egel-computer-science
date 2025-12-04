@@ -140,10 +140,17 @@ para EGEL Plus COMPU.
   valorar la solución a un problema mediante un algoritmo
   de búsqueda y la arquitectura de Grid computing
 
+## NotebookLM
+
+```text
+https://notebooklm.google.com/notebook/4b400621-6359-4ea0-abef-4c7ed4120b89
+```
+
 ## Simulador de EGEL
 
 Para ejecutar el simulador
 
 ```bash
+cd simulator
 npx serve .
 ```
