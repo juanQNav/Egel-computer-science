@@ -80,18 +80,15 @@ h1 {
 }
 
 /* Ajustes para contenido matemático largo */
-.MathJax {
+mjx-container[jax="SVG"] {
   font-size: 1em !important;
-  max-width: 100%;
   overflow-x: auto;
   overflow-y: hidden;
-  padding: 2px 0;
 }
 
-.mjx-chtml {
-  overflow-x: auto;
-  overflow-y: hidden;
-  max-width: 100%;
+mjx-container[jax="SVG"] svg {
+  max-width: 100% !important;
+  height: auto !important;
 }
 
 /* --- OPCIONES RESPONSIVE --- */

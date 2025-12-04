@@ -60,9 +60,9 @@ document.addEventListener("DOMContentLoaded", () => {
     element.innerHTML = processedContent;
 
     // Then, tell MathJax to process LaTeX expressions
-    if (window.MathJax) {
-      MathJax.typesetPromise([element]).catch((err) => {
-        console.error("Error processing MathJax:", err);
+    if (window.MathJax && MathJax.typesetPromise) {
+      MathJax.startup.promise.then(() => {
+        MathJax.typesetPromise([element]);
       });
     }
   }
