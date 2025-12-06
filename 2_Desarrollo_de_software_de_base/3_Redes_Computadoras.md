@@ -96,6 +96,22 @@ Para el profesional en Ciencias Computacionales, el dominio de este tema implica
 
 **Aplicaciones prácticas:** Implementación de VPNs corporativas y configuración de prioridades en routers para asegurar que las llamadas VoIP no se corten.
 
+##### 5. Modelo OSI
+
+<!-- markdownlint-disable MD013 -->
+
+| **N°** | **Capa (Inglés / Español)** | **Función Principal**                                 | **Ejemplos de Protocolos / Tecnologías**     |
+| ------ | --------------------------- | ----------------------------------------------------- | -------------------------------------------- |
+| **7**  | Application / Aplicación    | Interacción con el usuario y aplicaciones             | HTTP, HTTPS, FTP, SMTP, DNS, Telnet          |
+| **6**  | Presentation / Presentación | Formato de datos, cifrado, compresión                 | SSL/TLS, JPEG, MPEG, ASCII, Unicode          |
+| **5**  | Session / Sesión            | Manejo de sesiones, autenticación, control de diálogo | NetBIOS, RPC, PPTP                           |
+| **4**  | Transport / Transporte      | Control de flujo, confiabilidad, segmentación         | TCP, UDP, SCTP                               |
+| **3**  | Network / Red               | Ruteo, direcciones lógicas                            | IP, ICMP, IPsec, RIP, OSPF, BGP              |
+| **2**  | Data Link / Enlace de Datos | Direccionamiento físico, control de errores           | Ethernet, Wi-Fi (IEEE 802.11), PPP, MAC, ARP |
+| **1**  | Physical / Física           | Transmisión de bits, señales eléctricas/ópticas       | Cable UTP, Fibra óptica, Hubs, Bluetooth     |
+
+<!-- markdownlint-enable MD013 -->
+
 ---
 
 #### 📖 Glosario de Términos
