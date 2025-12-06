@@ -171,7 +171,25 @@ Indican cuántas veces aparece algo:
 | `$`     | Final              | `fin$`    | textos que terminan en “fin” |        |              |
 | `\b`    | Límite de palabra  | `\bsol`   | “sol” al inicio de palabra   |        |              |
 
-## <!-- markdownlint-enable MD013 -->
+<!-- markdownlint-enable MD013 -->
+
+##### 5. Tecnicas de optimización
+
+<!-- markdownlint-disable MD013 -->
+
+| **Criterio**                   | **Inline Expansion**                                                            | **Loop Unrolling**                                                     | **Tail Call Optimization (TCO)**                                                               |
+| ------------------------------ | ------------------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| **Objetivo principal**         | Reducir la sobrecarga de llamadas a funciones reemplazándolas por su cuerpo.    | Acelerar bucles reduciendo el número de iteraciones lógicas.           | Reducir/eliminar el uso de pila en llamadas recursivas en cola.                                |
+| **Enfoque**                    | Sustituir la llamada por el código de la función.                               | Repetir varias veces el cuerpo del bucle dentro del mismo bucle.       | Reutilizar el marco de pila o convertir la recursión de cola en un bucle.                      |
+| **Aplicable a recursión**      | Poco útil; puede causar crecimiento infinito si se intenta aplicar a recursión. | No aplicable; es para bucles, no para llamadas recursivas.             | Sí; está diseñada específicamente para recursión en cola.                                      |
+| **Efecto en el uso de pila**   | No reduce el uso de pila en llamadas recursivas.                                | No afecta el uso de pila.                                              | Reduce a _O(1)_ o lo mantiene constante.                                                       |
+| **Riesgos / desventajas**      | Aumenta el tamaño del código (code bloat). No sirve para recursiones profundas. | Aumenta el tamaño del código. Puede empeorar el rendimiento por caché. | Solo funciona si la llamada es en cola. No todos los compiladores la implementan al 100%.      |
+| **Situaciones ideales**        | Funciones pequeñas, no recursivas, llamadas frecuentemente.                     | Bucles con alto número de iteraciones y cuerpo pequeño.                | Funciones recursivas en cola donde se desea minimizar la pila.                                 |
+| **Impacto en rendimiento**     | Reduce costo de llamada, pero no cambia complejidad.                            | Reduce saltos y verificaciones de condición; puede ser muy efectivo.   | Puede convertir recursión en un bucle eficiente: mejora enorme en pila y en costo por llamada. |
+| **Complejidad del compilador** | Baja: es una optimización estándar.                                             | Baja-media.                                                            | Alta: requiere análisis y transformación adecuada.                                             |
+| **Ejemplo típico**             | `f(x)` se reemplaza por el cuerpo de `f`.                                       | `for i in 1..8` se vuelve 2 iteraciones de 4 pasos cada una.           | `return f(n-1)` transformado a un bucle.                                                       |
+
+<!-- markdownlint-enable MD013 -->
 
 #### 📖 Glosario de Términos
 
