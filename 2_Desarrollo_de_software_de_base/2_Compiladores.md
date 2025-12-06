@@ -83,6 +83,96 @@ Además de la estructura interna del compilador, este tema integra profundamente
 
 ---
 
+##### 4. Expresiones Regulares.
+
+**Qué son las expresiones regulares:** Una **expresión regular (regex)** es una secuencia de caracteres que describe un **patrón de búsqueda**.  
+Sirve para encontrar, validar o reemplazar texto que cumpla una forma específica.
+
+Ejemplos:
+
+- Verificar si un correo es válido.
+- Buscar números en un texto.
+- Reemplazar palabras.
+- Extraer fechas, teléfonos, etc.
+
+---
+
+1. **Literales**
+
+Coinciden exactamente con el texto escrito.
+
+Ejemplo:
+
+```
+Hola
+```
+
+Coincide con “Hola” exactamente.
+
+---
+
+2. **Metacaracteres básicos**
+
+Son símbolos especiales que significan algo más.
+
+Los más usados:
+
+<!-- markdownlint-disable MD013 -->
+
+| Símbolo | Significa                                 |
+| ------- | ----------------------------------------- |
+| `.`     | Cualquier carácter                        |
+| `\d`    | Un dígito (0–9)                           |
+| `\w`    | Una palabra (letras, números, guion bajo) |
+| `\s`    | Un espacio en blanco                      |
+| `^`     | Inicio                                    |
+| `$`     | Final                                     |
+| `* + ?` | Cantidades                                |
+
+<!-- markdownlint-enable MD013 -->
+
+3. **Cuantificadores**
+
+Indican cuántas veces aparece algo:
+
+<!-- markdownlint-disable MD013 -->
+
+| Símbolo | Significa     | Ejemplo                     |
+| ------- | ------------- | --------------------------- |
+| `*`     | 0 o más       | `a*` → "", "a", "aaaa"      |
+| `+`     | 1 o más       | `a+` → "a", "aaa" (no "")   |
+| `?`     | 0 o 1         | `a?` → "", "a"              |
+| `{n}`   | Exactamente n | `a{3}` → "aaa"              |
+| `{n,}`  | mínimo n      | `a{2,}` → "aa", "aaa"       |
+| `{n,m}` | entre n y m   | `a{1,3}` → "a", "aa", "aaa" |
+
+<!-- markdownlint-enable MD013 -->
+
+**Símbolos principales y su uso**
+
+<!-- markdownlint-disable MD013 -->
+
+| Símbolo | Nombre / Uso       | Ejemplo   | Coincide con                 |        |              |
+| ------- | ------------------ | --------- | ---------------------------- | ------ | ------------ |
+| `.`     | Cualquier carácter | `a.c`     | "abc", "a-c"                 |        |              |
+| `\d`    | Dígito             | `\d\d\d`  | "123"                        |        |              |
+| `\w`    | Letra/número/\_    | `\w+`     | "hola_123"                   |        |              |
+| `\s`    | Espacio            | `\s+`     | espacios/tabulaciones        |        |              |
+| `[ ]`   | Conjunto           | `[aeiou]` | vocales                      |        |              |
+| `[^ ]`  | Negación           | `[^0-9]`  | todo menos dígitos           |        |              |
+| `*`     | 0 o más            | `a*`      | "", "a", "aaa"               |        |              |
+| `+`     | 1 o más            | `a+`      | "a", "aaa"                   |        |              |
+| `?`     | 0 o 1              | `a?`      | "", "a"                      |        |              |
+| `{n}`   | Exacto             | `a{3}`    | "aaa"                        |        |              |
+| `{n,m}` | Rango              | `a{1,3}`  | "a", "aa", "aaa"             |        |              |
+| `()`    | Agrupar            | `(ha)+`   | "ha", "haha"                 |        |              |
+| `       | `                  | OR        | `gato                        | perro` | gato o perro |
+| `^`     | Inicio             | `^Hola`   | textos que empiezan con Hola |        |              |
+| `$`     | Final              | `fin$`    | textos que terminan en “fin” |        |              |
+| `\b`    | Límite de palabra  | `\bsol`   | “sol” al inicio de palabra   |        |              |
+
+## <!-- markdownlint-enable MD013 -->
+
 #### 📖 Glosario de Términos
 
 <!-- markdownlint-disable MD013 -->
