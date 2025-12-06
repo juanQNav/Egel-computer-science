@@ -116,7 +116,44 @@ Para el profesional en Ciencias Computacionales, el dominio de este tema implica
 “**F**eliz **E**nano **R**escata **T**ortugas **S**in **A**puro”
 (**F**ísica – **E**nlace – **R**ed – **T**ransporte – **S**esión – **P**resentación – **A**plicación)
 
----
+##### 6. Protocolos + Cap + Función + Puerto
+
+<!-- markdownlint-disable MD013 -->
+
+| **Protocolo / Tecnología** | **Capa OSI**     | **¿Para qué sirve?**             | **Puerto(s)**                        |
+| -------------------------- | ---------------- | -------------------------------- | ------------------------------------ |
+| **HTTP**                   | Aplicación (7)   | Carga de páginas web.            | **80 (TCP)**                         |
+| **HTTPS**                  | Aplicación (7)   | Navegación web cifrada.          | **443 (TCP)**                        |
+| **FTP**                    | Aplicación (7)   | Transferencia de archivos.       | **21 (control), 20 (datos), TCP**    |
+| **SMTP**                   | Aplicación (7)   | Envío de correos.                | **25, 587, 465 (TCP)**               |
+| **DNS**                    | Aplicación (7)   | Traduce dominios a IP.           | **53 (UDP/TCP)**                     |
+| **Telnet**                 | Aplicación (7)   | Acceso remoto sin cifrar.        | **23 (TCP)**                         |
+| **SSL/TLS**                | Presentación (6) | Cifrado de datos.                | — (_Se usa sobre TCP, p. ej. HTTPS_) |
+| **ASCII / Unicode**        | Presentación (6) | Codificación de caracteres.      | —                                    |
+| **JPEG / MPEG**            | Presentación (6) | Compresión de imagen/video.      | —                                    |
+| **NetBIOS**                | Sesión (5)       | Servicios entre equipos Windows. | **137–139 (UDP/TCP)**                |
+| **RPC**                    | Sesión (5)       | Ejecutar funciones remotas.      | **135 (TCP/UDP)**                    |
+| **PPTP**                   | Sesión (5)       | VPN antigua.                     | **1723 (TCP)**                       |
+| **TCP**                    | Transporte (4)   | Conexión confiable.              | — (Es protocolo, no usa puertos)     |
+| **UDP**                    | Transporte (4)   | Conexión rápida sin garantía.    | —                                    |
+| **SCTP**                   | Transporte (4)   | Transporte multicanal.           | —                                    |
+| **IP**                     | Red (3)          | Direcciones y ruteo.             | —                                    |
+| **ICMP**                   | Red (3)          | Diagnóstico (ping).              | —                                    |
+| **IPsec**                  | Red (3)          | Seguridad en IP.                 | —                                    |
+| **RIP**                    | Red (3)          | Enrutamiento básico.             | **520 (UDP)**                        |
+| **OSPF**                   | Red (3)          | Enrutamiento avanzado.           | — (Usa IP protocolo 89)              |
+| **BGP**                    | Red (3)          | Enrutamiento entre ISPs.         | **179 (TCP)**                        |
+| **Ethernet**               | Enlace (2)       | Red cableada.                    | —                                    |
+| **Wi-Fi (802.11)**         | Enlace (2)       | Red inalámbrica.                 | —                                    |
+| **PPP**                    | Enlace (2)       | Conexión punto a punto.          | —                                    |
+| **ARP**                    | Enlace (2)       | IP → MAC.                        | —                                    |
+| **MAC (dirección)**        | Enlace (2)       | Identificador físico.            | —                                    |
+| **Cable UTP**              | Física (1)       | Medio de transmisión.            | —                                    |
+| **Fibra óptica**           | Física (1)       | Transmisión por luz.             | —                                    |
+| **Hub**                    | Física (1)       | Repite señales.                  | —                                    |
+| **Bluetooth**              | Física (1)       | Conexión inalámbrica corta.      | —                                    |
+
+## <!-- markdownlint-enable MD013 -->
 
 #### 📖 Glosario de Términos
 
