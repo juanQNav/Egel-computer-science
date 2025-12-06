@@ -112,9 +112,9 @@ Para el profesional en Ciencias Computacionales, el dominio de este tema implica
 
 <!-- markdownlint-enable MD013 -->
 
-**Mnemotecnia para recordar el modelo OSI: **
+**Mnemotecnia para recordar el modelo OSI:**
 “**F**eliz **E**nano **R**escata **T**ortugas **S**in **A**puro”
-(**F**ísica – **E**nlace – **R**ed – **T**ransporte – **S**esión – **P**resentación – **A**plicación)
+(**F**ísica – **E**nlace – **R**ed – **T**ransporte – **S**esión – **P**resentación – \*\*A\*\*plicación)
 
 ##### 6. Protocolos + Cap + Función + Puerto
 
