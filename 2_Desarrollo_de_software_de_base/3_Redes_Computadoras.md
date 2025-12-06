@@ -155,6 +155,252 @@ Para el profesional en Ciencias Computacionales, el dominio de este tema implica
 
 ## <!-- markdownlint-enable MD013 -->
 
+##### 6. Otras cosas acerca de redes básicas
+
+Perfecto. Aquí tienes un **megareumen organizado en TABLAS**, con **explicaciones claras**, **mnemotecnias**, **significados de siglas**, y **cómo usar cada concepto**, basado en **todos los temas que aparecieron en tus preguntas**.
+
+Esto es como una **chuleta completa de redes básicas**, ideal para exámenes.
+
+---
+
+# 🟦 **1. Direccionamiento IP (IPv4 e IPv6)**
+
+## 📘 _IPv4 – Rangos privados_
+
+| Clase       | Rango privado                 | Tamaño                       | Uso                  |
+| ----------- | ----------------------------- | ---------------------------- | -------------------- |
+| **Clase A** | 10.0.0.0 – 10.255.255.255     | Muy grande (16M hosts)       | Redes enormes        |
+| **Clase B** | 172.16.0.0 – 172.31.255.255   | Grande                       | Empresas medianas    |
+| **Clase C** | 192.168.0.0 – 192.168.255.255 | Pequeñas (256 hosts por red) | LAN caseras/pequeñas |
+
+🧠 **Mnemotecnia:**
+**A** = _"Amplia"_
+**B** = _"Business"_
+**C** = _"Casa"_
+
+---
+
+## 📘 _IPv4 – Subnetting_
+
+### **Valor clave:**
+
+Para crear subredes se agregan bits a la máscara.
+
+<!-- markdownlint-disable MD013 -->
+
+| Necesitas      | Bits       | Nueva máscara | Tamaño de subred   |
+| -------------- | ---------- | ------------- | ------------------ |
+| 2 subredes     | 1 bit      | /25           | 128 direcciones    |
+| **4 subredes** | **2 bits** | **/26**       | **64 direcciones** |
+| 8 subredes     | 3 bits     | /27           | 32 direcciones     |
+
+<!-- markdownlint-enable MD013 -->
+
+Ejemplo visto:
+
+- 192.168.1.0/24 → dividir en 4 → /26
+- Subred 1 → red **192.168.1.0**
+- Broadcast → **192.168.1.63**
+
+🧠 Mnemotecnia: **“Subnettear = Sumar Bits”**
+
+---
+
+## 📘 _IPv6 – Subredes_
+
+La red **/48** puede dividirse en 16 subredes modificando el cuarto bloque (hexadecimal).
+
+Ejemplo visto:
+10ª subred → **000A**
+Gateway → primera dirección disponible:
+**2001:db8:85a3:000A::1/64**
+
+🧠 Mnemotecnia:
+**Hexa = A(10), B(11), C(12)...**
+
+---
+
+# 🟦 **2. Protocolos importantes**
+
+<!-- markdownlint-disable MD013 -->
+
+| Protocolo   | Capa                      | Significado                                     | Función                                 | Importante             |
+| ----------- | ------------------------- | ----------------------------------------------- | --------------------------------------- | ---------------------- |
+| **TCP**     | Transporte                | Transmission Control Protocol                   | Confiable, control de flujo, congestión | Web, correo, descargas |
+| **UDP**     | Transporte                | User Datagram Protocol                          | Rápido, sin confiabilidad               | Streaming, VoIP        |
+| **IP**      | Red                       | Internet Protocol                               | Enrutamiento                            | Encamina paquetes      |
+| **ICMP**    | Red                       | Internet Control Message Protocol               | Diagnóstico (ping)                      | No transporta datos    |
+| **ARP**     | Enlace                    | Address Resolution Protocol                     | IP→MAC                                  | Solo LAN               |
+| **DHCP**    | Aplicación                | Dynamic Host Configuration Protocol             | Asigna IPs automáticamente              | Redes internas         |
+| **SSL/TLS** | Capa de sesión/aplicación | Secure Sockets Layer / Transport Layer Security | Cifrado HTTPS                           | Seguridad remota       |
+
+---
+
+<!-- markdownlint-enable MD013 -->
+
+## 🧠 Mnemotecnia para TCP vs UDP
+
+**TCP → “Todo Controlado y Preciso”**
+**UDP → “Ultra Directo y Pronto”** (rápido pero sin control)
+
+---
+
+# 🟦 **3. Protocolos de Enrutamiento**
+
+<!-- markdownlint-disable MD013 -->
+
+| Protocolo | Tipo             | Métrica                | Cuándo usar            |
+| --------- | ---------------- | ---------------------- | ---------------------- |
+| **RIP**   | Distancia-vector | Saltos (máx 15)        | Redes pequeñas         |
+| **OSPF**  | Estado-enlace    | Costo (ancho de banda) | Redes medianas-grandes |
+| EIGRP     | Híbrido          | Ancho de banda + delay | Cisco                  |
+
+<!-- markdownlint-enable MD013 -->
+
+🧠 Mnemotecnia:
+**O**SPF → **O**ptimiza rutas con **O**bjetivos (métricas avanzadas)
+
+---
+
+# 🟦 **4. Cableado estructurado**
+
+<!-- markdownlint-disable MD013 -->
+
+| Elemento                        | Función                                          |
+| ------------------------------- | ------------------------------------------------ |
+| **Patch panel**                 | Organiza cables y permite administrar conexiones |
+| **Rack**                        | Estructura física para equipos                   |
+| **Canaleta**                    | Conducir cables por paredes o techos             |
+| **Cables par trenzado directo** | Para host ↔ switch                              |
+| **Cables cruzados (crossover)** | Switch ↔ switch (antes de Auto-MDI)             |
+| **Fibra óptica**                | Larga distancia o alto ancho de banda            |
+
+## <!-- markdownlint-enable MD013 -->
+
+## Categorías de cables
+
+<!-- markdownlint-disable MD013 -->
+
+| Categoría  | Velocidad        | Uso           |
+| ---------- | ---------------- | ------------- |
+| **Cat 5**  | 100 Mbps         | Obsoleto      |
+| **Cat 5e** | 1 Gbps           | Lo mínimo hoy |
+| **Cat 6**  | 1–10 Gbps        | Empresas      |
+| **Cat 7**  | 10 Gbps blindado | Especializado |
+
+<!-- markdownlint-enable MD013 -->
+
+🧠 Mnemotecnia:
+**5e → estándar mínimo; 6 → mejor para 1Gb; 7 → súper blindado**
+
+---
+
+# 🟦 **5. Organizaciones de estándares**
+
+<!-- markdownlint-disable MD013 -->
+
+| Organización | Significado                                       | Qué estandariza               | Ejemplo                  |
+| ------------ | ------------------------------------------------- | ----------------------------- | ------------------------ |
+| **TIA**      | Telecommunications Industry Association           | Cableado estructurado         | TIA-568                  |
+| **IEEE**     | Institute of Electrical and Electronics Engineers | Ethernet, Wi-Fi, VLAN         | IEEE 802.3, 802.11       |
+| **ISO**      | International Organization for Standardization    | Estándares globales generales | ISO/IEC 11801            |
+| **IANA**     | Internet Assigned Numbers Authority               | IPs, puertos                  | Administración IPv4/IPv6 |
+
+<!-- markdownlint-enable MD013 -->
+
+🧠 Mnemotecnia:
+**iEEEthernet**, **TiAmbres y cables**, **IsoGlobal**, **IANA → números**
+
+---
+
+# 🟦 **6. Wi-Fi y redes inalámbricas**
+
+<!-- markdownlint-disable MD013 -->
+
+| Tecnología  | Alcance        | Velocidad | Uso                   |
+| ----------- | -------------- | --------- | --------------------- |
+| **Wi-Fi**   | Local (metros) | Alta      | Hogares y oficinas    |
+| **WiMAX**   | Kilómetros     | Alta      | Enlaces punto a punto |
+| **LTE**     | Muy amplio     | Media     | Celular               |
+| **LoRaWAN** | Muy amplio     | Muy baja  | IoT sensores          |
+
+<!-- markdownlint-enable MD013 -->
+
+🧠 Mnemotecnia:
+**WiMAX = Wi-Fi Máxima Distancia**
+
+---
+
+# 🟦 **7. Seguridad en redes**
+
+<!-- markdownlint-disable MD013 -->
+
+| Medida                  | Para qué sirve                        |
+| ----------------------- | ------------------------------------- |
+| **WPA2/WPA3**           | Seguridad Wi-Fi real                  |
+| **Filtrado MAC**        | Limita dispositivos permitidos        |
+| **Firewall**            | Controlar tráfico, no acceso Wi-Fi    |
+| **SSL/TLS**             | Cifrar conexiones remotas HTTPS       |
+| **Contraseñas seguras** | Buenas prácticas, pero no cifran nada |
+
+## <!-- markdownlint-enable MD013 -->
+
+# 🟦 **8. Topologías de red**
+
+<!-- markdownlint-disable MD013 -->
+
+| Topología | Tolerancia a fallos | Comentario                      |
+| --------- | ------------------- | ------------------------------- |
+| **Malla** | ⭐⭐⭐⭐⭐          | Máxima redundancia              |
+| Anillo    | ⭐⭐                | Si se rompe, se cae             |
+| Bus       | ⭐                  | Un cable único → punto de fallo |
+| Estrella  | ⭐⭐                | El switch es crítico            |
+
+<!-- markdownlint-ensable MD013 -->
+
+🧠 Mnemotecnia:
+**Malla = Mucha redundancia**
+
+---
+
+# 🟦 **9. Acceso al medio**
+
+<!-- markdownlint-disable MD013 -->
+
+| Método         | Uso               | Característica     |
+| -------------- | ----------------- | ------------------ |
+| **CSMA/CD**    | Ethernet cableado | Detecta colisiones |
+| **CSMA/CA**    | Wi-Fi             | Evita colisiones   |
+| **Token Ring** | Obsoleto          | Un token circula   |
+
+<!-- markdownlint-enable MD013 -->
+
+🧠 Mnemotecnia:
+**CD → Detect (cable)**
+**CA → Avoid (aire)**
+
+---
+
+# 🟦 **10. Dispositivos de red**
+
+<!-- markdownlint-disable MD013 -->
+
+| Dispositivo     | Función                                 |
+| --------------- | --------------------------------------- |
+| **Router**      | Une redes distintas, conecta a Internet |
+| **Switch**      | Conecta hosts dentro de una LAN         |
+| **Firewall**    | Filtra tráfico, seguridad               |
+| **Gateway**     | Traduce protocolos                      |
+| **ONT (fibra)** | Termina la fibra óptica para Internet   |
+
+<!-- markdownlint-enable MD013 -->
+
+🧠 Para fibra:
+Si viene **fibra → ONT/Router**
+Si es LAN interna → switch
+
+---
+
 #### 📖 Glosario de Términos
 
 <!-- markdownlint-disable MD013 -->
