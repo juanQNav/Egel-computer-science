@@ -16,7 +16,7 @@ para EGEL Plus COMPU.
 1. Desarrollo de software de base
    1. [Arquitectura de computadoras y sistemas operativos](2_Desarrollo_de_software_de_base/1_Arquitectura_Computadoras_Sistemas_Operativos.md)
    2. [Compiladores](2_Desarrollo_de_software_base/2_Compiladores.md)
-   3. [Redes de Computadoras](2_Desarrollo_de_software_base/3_Redes_Computadoras.md)
+   3. [Redes de Computadoras](2_Desarrollo_de_software_de_base/3_Redes_Computadoras.md)
 1. Desarrollo de software de aplicación
    1. [Ingeniería de software](3_Desarrollo_de_software_de_Apliacion/1_Ingenieria_Software.md)
    2. [Lenguajes de programación](3_Desarrollo_de_software_de_Apliacion/2_Lenguajes_Programacion.md)
