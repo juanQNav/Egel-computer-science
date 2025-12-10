@@ -4,6 +4,10 @@ Es un compilado de temas acerca ciencias de la computación basado en la guía
 de estudio
 para EGEL Plus COMPU.
 
+## Simulador en GitHub Pages
+
+[https://juanqnav.github.io/Egel-computer-science/simulator/](https://juanqnav.github.io/Egel-computer-science/simulator/)
+
 ## Áreas
 
 <!-- format:off -->
